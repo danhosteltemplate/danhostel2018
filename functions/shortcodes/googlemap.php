@@ -41,44 +41,26 @@ function googlemap_shortcode( $atts, $content = null ) {
 	if( isset($atts['overview_map_control']) ) $overview_map_control = $atts['overview_map_control'];
 	
 	$output = '';
-	//$output .= '<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>';
-	$output .= '<script type="text/javascript" src="' . get_template_directory_uri() . '/js/jquery.gmap.min.js"></script>';
+	$output .= '<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2BgsPwz976EKmWNYX7u8nBfnUCxjPOvU&callback=initMap">
+    </script>';
+	//$output .= '<script type="text/javascript" src="' . get_template_directory_uri() . '/js/jquery.gmap.min.js"></script>';
 	
-	$output .= '<div id="google-map" style="';
+	$output .= '<div id="map" style="';
 	$output .= 'width:' . $width . ';';
 	$output .= 'height:' . $height . ';';
 	$output .= '"></div>';
 	$output .= '<script type="text/javascript">
-		jQuery(document).ready(function(jQuery) {
-				jQuery("#google-map").gMap({';
-	
-	$output .= 'latitude: ' . $latitude . ',';
-	$output .= 'longitude: ' . $longitude . ',';
-	$output .= 'maptype: "' . $maptype . '",';
-	$output .= 'zoom: ' . $zoom . ',';
-	
-	$output .= 'markers: [
-						{';
-	$output .= 'latitude: ' . $marker_latitude . ',';
-	$output .= 'longitude: ' . $marker_longitude . ',';
-	$output .= 'address: "' . $marker_address . '",';
-	$output .= 'popup: ' . $marker_popup . ',';
-	$output .= 'html: "' . $marker_html . '"';
-						
-	$output .= '}
-					],';
-									
-	$output .= 'controls: {';
-	$output .= 'panControl: ' . $pan_control . ',';
-	$output .= 'zoomControl: ' . $zoom_control . ',';
-	$output .= 'mapTypeControl: ' . $map_type_control . ',';
-	$output .= 'scaleControl: ' . $scale_control . ',';
-	$output .= 'streetViewControl: ' . $street_view_control . ',';
-	$output .= 'overviewMapControl: ' . $overview_map_control . '';
-	
-	$output .= '}
-				});
-		});
+	function initMap() {
+  // The location of Uluru
+  var uluru = {lat: ' . $latitude . ', lng: ' . $longitude . '};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById("map"), {zoom: '. $zoom .', center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+
 		</script>
 	
 	';
