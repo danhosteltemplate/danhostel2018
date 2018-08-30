@@ -22,6 +22,17 @@
 		<!-- END .background-wrapper -->
 		</div>
 
+
+<style>
+    @media all and (max-width: 767px){
+    form.booking-form.booking-validation.hidden{
+        display:block !important;
+    }
+    form.booking-form.booking-validation{
+        display:none !important;
+    } 
+    }
+</style>
 	<?php wp_footer(); ?>
 
 	<!-- END body -->
