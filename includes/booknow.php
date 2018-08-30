@@ -54,3 +54,15 @@ switch (ICL_LANGUAGE_CODE) {
         <input class="bookbutton" type="submit" value="<?php _e($submitBTN, $DOMAIN); ?>" />
     </div>
 </form>				
+
+<form class="booking-form booking-validation hidden" name="bookroom" method="get" action="<?php echo $url; ?>">
+    <h2 class="page-title"><strong><?php _e($title, $DOMAIN);?></strong></h2>
+    <div class="undertitle bordertop2px" style="width:100%;     margin-bottom: 10px;height:20px;"></div>
+    <div class="clearfix">
+        <input name="hostel_id" value="<?php echo $data[$danhostel_id];?>" type="hidden">
+        <input type="date" id="fromdate" name="fromdate" value="<?php //_e($startDate, $DOMAIN); ?>"class="input-half datepicker" placeholder="Fra dato" />
+        <input type="date" id="todate" name="todate" value="<?php //_e($endDate, $DOMAIN); ?>" class="input-half input-half-last datepicker" placeholder="Til dato" />
+        <input name="persons" value="1" type="hidden">
+        <input class="bookbutton" type="submit" value="<?php _e($submitBTN, $DOMAIN); ?>" />
+    </div>
+</form>
