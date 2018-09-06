@@ -41,7 +41,25 @@
 <!-- BEGIN body -->
 <body <?php body_class(); ?>>
 <div id="fb-root"></div>
-
+<?php
+if ( wp_is_mobile() ) { ?>
+<style>
+form.booking-form {
+    display: none;
+}
+form.booking-form.hidden {
+    display: block !important;
+}
+.bookbutton{
+	background:#74AC32 !important;
+}
+html .booking-form .datepicker {
+    width: 40% !important;
+	max-width: 40% !important;
+	min-width:40%;
+}
+</style>
+<?php } ?>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
