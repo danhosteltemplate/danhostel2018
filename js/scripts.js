@@ -1,12 +1,14 @@
 jQuery(document).ready(function() { 
-	// Drop Down Menu
-	/*jQuery("ul#main-menu").superfish({ 
-        delay:       0,
-        animation:   {opacity:'show',height:'show'},
-        speed:       'fast',
-        autoArrows:  true,
-        dropShadows: true
-    });*/
+	
+jQuery('.booking-form.hidden #fromdate')[0].valueAsDate = new Date();
+
+jQuery('.booking-form.hidden #fromdate').change(function() {
+  var date= this.valueAsDate;
+  date.setDate(date.getDate() + 1);
+  jQuery('.booking-form.hidden #todate')[0].valueAsDate = date;
+});
+
+jQuery('.booking-form.hidden #fromdate').change();
 
 	// Accordion
 	jQuery(".accordion").accordion( { autoHeight: false } );
@@ -52,7 +54,7 @@ jQuery(document).ready(function() {
 		window.location = jQuery(this).find("option:selected").val();
 	});
 */	
-	onchange="if (this.value) window.location.href=this.value"
+	//onchange="if (this.value) window.location.href=this.value"
 	
 	
 jQuery(function() {
