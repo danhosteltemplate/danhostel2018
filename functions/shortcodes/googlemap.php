@@ -41,10 +41,14 @@ function googlemap_shortcode( $atts, $content = null ) {
 	if( isset($atts['overview_map_control']) ) $overview_map_control = $atts['overview_map_control'];
 	
 	$output = '';
+	
+	// GOOGLE MAP API HERE
+	
 	$output .= '<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2BgsPwz976EKmWNYX7u8nBfnUCxjPOvU&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDArmDulhhZhK91B2JF5Kg49qPaWZhOf8&callback=initMap">
     </script>';
-	//$output .= '<script type="text/javascript" src="' . get_template_directory_uri() . '/js/jquery.gmap.min.js"></script>';
+	
+	// GOOGLE MAP API HERE
 	
 	$output .= '<div id="map" style="';
 	$output .= 'width:' . $width . ';';
