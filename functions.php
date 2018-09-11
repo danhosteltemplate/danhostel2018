@@ -406,12 +406,18 @@ if( ! function_exists( 'qns_load_js' ) ) {
 			// Load JS		
 			wp_register_script( 'jquery_ui', get_template_directory_uri() . '/js/ui/jquery-ui.min.js', array( 'jquery' ), '3.1.4', true );						
 			wp_register_script( 'prettyphoto', get_template_directory_uri() . '/js/jquery.prettyPhoto.js', array( 'jquery' ), '3.1.4', true );
-			wp_register_script( 'flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array( 'jquery' ), '2.1', true );
+			
 			wp_register_script( 'dateprice', get_template_directory_uri() . '/js/dateprice.js', array( 'jquery' ), '1.1.9', true );
 			wp_register_script( 'selectivizr', get_template_directory_uri() . '/js/selectivizr-min.js', array( 'jquery' ), '1.0.2', true );
 			wp_register_script( 'jquery_ui', get_template_directory_uri() . '/js/ui/jquery-ui.min.js', array( 'jquery' ), '1', true );
+			wp_register_script( 'flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array( 'jquery' ), '2.1', true );
+			
+			wp_enqueue_script( 'flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array ( 'jquery' ), '2.1', true);
 			wp_register_script( 'custom', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1', true );
-			wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/lightbox/js/jquery.fancybox.pack.js', array( 'jquery' ), false, true );
+			wp_register_script( 'fancybox', get_template_directory_uri() . '/lightbox/js/jquery.fancybox.pack.js', array( 'jquery' ), false, true );
+			
+			wp_enqueue_script( array( 'googlemap','flexslider','jquery_ui', 'prettyphoto', 'superfish', 'flexslider', 'custom' ), array(), false, true );
+			
    			wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/lightbox/js/lightbox.js', array( 'fancybox' ), false, true );
 			wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/lightbox/css/jquery.fancybox.css' );
 	
@@ -426,7 +432,6 @@ if( ! function_exists( 'qns_load_js' ) ) {
 			wp_enqueue_style('superfish', get_template_directory_uri() .'/css/superfish.css');
 			wp_enqueue_style('prettyPhoto', get_template_directory_uri() .'/css/prettyPhoto.css');
 			wp_enqueue_style('flexslider', get_template_directory_uri() .'/css/flexslider.css');
-			//wp_enqueue_style('jquery_datepicker', get_template_directory_uri() .'/css/jqueryui/jquery.ui.datepicker.css');
 			wp_enqueue_style('jquery_ui', get_template_directory_uri() .'/css/ui/jquery-ui.min.css');
 			wp_enqueue_style('responsive', get_template_directory_uri() .'/css/responsive.css');
 			wp_enqueue_style('responsive', get_template_directory_uri() .'/css/smof.css');
@@ -434,7 +439,6 @@ if( ! function_exists( 'qns_load_js' ) ) {
 			
 			// Load Fonts
 			wp_enqueue_style('fontHead','https://fonts.googleapis.com/css?family=Raleway');
-			//wp_enqueue_style('fontBody','http://fonts.googleapis.com/css?family=PT+Sans');
 			
 			global $data; //fetch options stored in $data
 			
@@ -461,70 +465,6 @@ if( ! function_exists( 'qns_load_js' ) ) {
 		}
 	}
 }
-
-/*if( !function_exists( 'custom_js' ) ) {
-
-    function custom_js() {
-		
-		global $data; //fetch options stored in $data
-		
-		echo '<script>';
-		
-		// Set slideshow autoplay on/off
-		echo 'var slideshow_autoplay = 3000;';
-
-			
-		// Set Google Map Lat	
-		if ( $data['gmap-top-lat'] ) :
-			echo 'var mapLat = ' . $data['gmap-top-lat'] . ';';
-		else :	
-			echo 'var mapLat = ' . $data['gmap-top-lat'] . ';';
-		endif;
-		
-		// Set Google Map Lng	
-		if ( $data['gmap-top-lng'] ) :
-			echo 'var mapLng = ' . $data['gmap-top-lng'] . ';';
-		else :	
-			echo 'var mapLng = ' . $data['gmap-top-lng'] . ';';
-		endif;
-		
-		// Set Google Map Marker Content
-		if ( $data['gmap-top-content'] ) : ?>
-			var mapContent = "<?php _e( $data['gmap-top-content'],'qns'); ?>";
-		<?php else :	
-			echo "var mapContent = '<h2>Danhostel Herning</h2><p>Lyren 6, Padborg</p>';";
-		endif;
-		
-		
-		$msgSelectRoom = __('Please select a room','qns');
-		$msgSelectArrDate = __('Please select a "Arrival" date','qns');
-		$msgSelectDepDate = __('Please select a "Departure" date','qns');
-		$msgArrDepMatch = __('The "Arrival" and "Departure" dates cannot match one another','qns');
-		$msgDepBeforeArr = __('The "Departure" date cannot be before the "Arrival" date','qns');
-		
-		echo "var msgSelectRoom = '" . $msgSelectRoom . "';";
-		echo "var msgSelectArrDate = '" . $msgSelectArrDate . "';";
-		echo "var msgSelectDepDate = '" . $msgSelectDepDate . "';";
-		echo "var msgArrDepMatch = '" . $msgArrDepMatch . "';";
-		echo "var msgDepBeforeArr = '" . $msgDepBeforeArr . "';";
-		
-		echo 'var goText = "' . __('Menu','qns') . '";';
-		
-		// Set Google Map Marker Content
-		/*if ( $data['datepickerformat'] == 'yyyy-mm-dd' ) {
-			echo "var datepickerformat = 'yyyy-mm-dd';";
-		 } else {
-			echo "var datepickerformat = 'yyyy-mm-dd';";
-		}
-		
-		echo "</script>\n\n";
-		
-    }
-
-}
-
-add_action('wp_footer', 'custom_js');
-*/
 
 /* ------------------------------------------------
    REWRITE UPLOAD ERROR MESSAGE
