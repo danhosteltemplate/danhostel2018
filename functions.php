@@ -404,30 +404,13 @@ if( ! function_exists( 'qns_load_js' ) ) {
 
 			
 			// Load JS		
-			/*
-			wp_register_script( 'jquery_ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js',  array( 'jquery' ), '1.8', true );
-			wp_register_script( 'jquery_uicore', get_template_directory_uri() . '/js/jquery.ui.core.js', array( 'jquery' ), '3.1.4', true );
-			wp_register_script( 'jquery_uiwidget', get_template_directory_uri() . '/js/jquery.ui.widget.js', array( 'jquery' ), '3.1.4', true );
-			wp_register_script( 'jquery_uidatepicker', get_template_directory_uri() . '/js/jquery.ui.datepicker.js', array( 'jquery' ), '3.1.4', true );*/
-			
-			wp_register_script( 'jquery_ui', get_template_directory_uri() . '/js/ui/jquery-ui.min.js', array( 'jquery' ), '3.1.4', true );
-			
-			
-			//wp_register_script( 'googlemap', 'http://maps.google.com/maps/api/js?key=AIzaSyDjMNpq2G_L0AJyqPUNClEQYfLoJDmTs0Y&sensor=false', '1.8', true );
-			
-			
+			wp_register_script( 'jquery_ui', get_template_directory_uri() . '/js/ui/jquery-ui.min.js', array( 'jquery' ), '3.1.4', true );						
 			wp_register_script( 'prettyphoto', get_template_directory_uri() . '/js/jquery.prettyPhoto.js', array( 'jquery' ), '3.1.4', true );
-			//wp_register_script( 'superfish', get_template_directory_uri() . '/js/superfish.js', array( 'jquery' ), '1.4.8', true );
 			wp_register_script( 'flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array( 'jquery' ), '2.1', true );
 			wp_register_script( 'dateprice', get_template_directory_uri() . '/js/dateprice.js', array( 'jquery' ), '1.1.9', true );
 			wp_register_script( 'selectivizr', get_template_directory_uri() . '/js/selectivizr-min.js', array( 'jquery' ), '1.0.2', true );
-						
 			wp_register_script( 'jquery_ui', get_template_directory_uri() . '/js/ui/jquery-ui.min.js', array( 'jquery' ), '1', true );
-			
 			wp_register_script( 'custom', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1', true );
-
-			wp_enqueue_script( array( 'googlemap','jquery_ui', 'prettyphoto', 'superfish', 'flexslider', 'custom' ), array(), false, true );
-
 			wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/lightbox/js/jquery.fancybox.pack.js', array( 'jquery' ), false, true );
    			wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/lightbox/js/lightbox.js', array( 'fancybox' ), false, true );
 			wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/lightbox/css/jquery.fancybox.css' );
@@ -961,6 +944,3 @@ function rsssl_exclude_http_url($html) {
   return $html;
 }
 add_filter("rsssl_fixer_output","rsssl_exclude_http_url");
-
-
-
