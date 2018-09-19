@@ -45,7 +45,7 @@ function googlemap_shortcode( $atts, $content = null ) {
 	// GOOGLE MAP API HERE
 	
 	$output .= '<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDArmDulhhZhK91B2JF5Kg49qPaWZhOf8&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2jhR794akD1be1uqgKoA5hq5mEf7b-zc&callback=initMap">
     </script>';
 	
 	// GOOGLE MAP API HERE
