@@ -4,7 +4,7 @@
 
 Theme Name: Danhostel V2018
 
-Theme URI: http://danhostel.dk	
+Theme URI: http://danhostel.dk
 
 Description: Danhostel Responsive
 
@@ -40,9 +40,9 @@ fieldset, form, label, legend,
 
 table, caption, tbody, tfoot, thead, tr, th, td,
 
-article, aside, canvas, details, embed, 
+article, aside, canvas, details, embed,
 
-figure, figcaption, footer, header, hgroup, 
+figure, figcaption, footer, header, hgroup,
 
 menu, nav, output, ruby, section, summary,
 
@@ -70,7 +70,7 @@ html .slider .slides > li {
 font-family: Danhostel-Font;
 font-weight: thin;
 src: url('fonts/ApexSans-Book.eot?#iefix') format("embedded-opentype"); /* IE9 Compact Modes  */
-src: url("fonts/ApexSans-Book.otf") format("opentype"), 
+src: url("fonts/ApexSans-Book.otf") format("opentype"),
 url('fonts/ApexSans-Book.ttf')  format('truetype'),
 url('fonts/ApexSans-Book.woff') format('woff'); /* Pretty Modern Browsers */
 }
@@ -87,7 +87,7 @@ url('fonts/ApexSans-Bold.woff') format('woff'); /* Pretty Modern Browsers */
 
 /* HTML5 display-role reset for older browsers */
 
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 
 footer, header, hgroup, menu, nav, section {
 
@@ -164,7 +164,7 @@ input::-webkit-calendar-picker-indicator{
     display: none;
 }
 
-input[type="date"]::-webkit-input-placeholder{ 
+input[type="date"]::-webkit-input-placeholder{
     visibility: hidden !important;
 }
 
@@ -215,12 +215,12 @@ a {
 }
 
 .danhostelFontStyle{
-	font-family: Danhostel-Font, Fallback, sans-serif; 
+	font-family: Danhostel-Font, Fallback, sans-serif;
 	font-weight: bold;
 	-ms-transform: scaleX(1.2); /* IE 9 */
     -webkit-transform: scaleX(1.2); /* Chrome, Safari, Opera */
 	transform: scaleX(1.2);
-	font-size: 20px; 
+	font-size: 20px;
 	margin: 8px 0  -3.7px 90px;
 }
 
@@ -321,7 +321,7 @@ a {
 	padding: 10px 20px 10px 20px;
 	color: #fff;
 	height: 20px;
-	margin: 0 0 50px 0; 
+	margin: 0 0 50px 0;
 }
 
 .top-bar a {
@@ -470,7 +470,7 @@ a {
 #title-wrapper2{
 z-index: 9999;
     position: absolute;
-    right: 85px;	
+    right: 85px;
 	top: 1px;
 }
 
@@ -497,7 +497,7 @@ html #navigation {
     float: right;
     margin-top: 25px;
 	    width: initial;
-		
+
 }
 
 
@@ -559,7 +559,7 @@ html #navigation {
 
 	display: block;
 
-	-webkit-border-radius: 99%; 
+	-webkit-border-radius: 99%;
 
 	-moz-border-radius: 99%;
 
@@ -836,11 +836,11 @@ html #main-menu li:hover ul{
 
 
 
-.corner-left { 
+.corner-left {
 
 	width: 0;
 
-	height: 0; 
+	height: 0;
 
 	position: absolute;
 
@@ -852,11 +852,11 @@ html #main-menu li:hover ul{
 
 
 
-.corner-right { 
+.corner-right {
 
 	width: 0;
 
-	height: 0; 
+	height: 0;
 
 	position: absolute;
 
@@ -872,7 +872,7 @@ html #main-menu li:hover ul{
 
 	width: 0;
 
-	height: 0; 
+	height: 0;
 
 	position: absolute;
 
@@ -1121,7 +1121,7 @@ li.sfHover > a > .sf-sub-indicator {
 
 	position: relative !important;
 
-} 
+}
 
 
 
@@ -1271,7 +1271,7 @@ li.sfHover > a > .sf-sub-indicator {
 
 .pagination li a {
 
-	-webkit-border-radius: 99%; 
+	-webkit-border-radius: 99%;
 
 	-moz-border-radius: 99%;
 
@@ -1783,7 +1783,7 @@ ol ol li {
 	font-size: 12px;
 	line-height: 1;
 	padding: 2px;
-	-webkit-border-radius: 30px; 
+	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
 	-o-border-radius: 30px;
 	border-radius: 30px;
@@ -2278,11 +2278,11 @@ pre {
 
 
 
-.ui-tabs { 
+.ui-tabs {
 
-	position: relative; 
+	position: relative;
 
-	padding: .2em; 
+	padding: .2em;
 
 	zoom: 1;
 
@@ -2292,7 +2292,7 @@ pre {
 
 
 
-.ui-tabs .ui-tabs-nav { 
+.ui-tabs .ui-tabs-nav {
 
 	margin: 0;
 
@@ -2304,19 +2304,19 @@ pre {
 
 
 
-.ui-tabs .ui-tabs-nav li { 
+.ui-tabs .ui-tabs-nav li {
 
-	list-style: none; 
+	list-style: none;
 
-	float: left; 
+	float: left;
 
-	position: relative; 
+	position: relative;
 
-	top: 1px; 
+	top: 1px;
 
-	border-bottom: #dee0e0 1px solid; 
+	border-bottom: #dee0e0 1px solid;
 
-	padding: 0; 
+	padding: 0;
 
 	white-space: nowrap;
 
@@ -2334,11 +2334,11 @@ pre {
 
 
 
-.ui-tabs .ui-tabs-nav li a { 
+.ui-tabs .ui-tabs-nav li a {
 
-	float: left; 
+	float: left;
 
-	padding: 14px 20px 14px 20px; 
+	padding: 14px 20px 14px 20px;
 
 	text-decoration: none;
 
@@ -2372,13 +2372,13 @@ pre {
 
 
 
-.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { 
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a {
 
 	cursor: text;
 
 }
 
-.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { 
+.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
 
 	cursor: pointer;
 
@@ -2386,9 +2386,9 @@ pre {
 
 
 
-.ui-tabs .ui-tabs-panel { 
+.ui-tabs .ui-tabs-panel {
 
-	display: block; 
+	display: block;
 
 	border: #dee0e0 1px solid;
 
@@ -2398,7 +2398,7 @@ pre {
 
 
 
-.ui-tabs .ui-tabs-hide { 
+.ui-tabs .ui-tabs-hide {
 
 	display: none !important;
 
@@ -3219,7 +3219,7 @@ ul.comment-list li li {
 
 	text-align: center;
 
-	-webkit-border-radius: 3px; 
+	-webkit-border-radius: 3px;
 
 	-moz-border-radius: 3px;
 
@@ -3259,7 +3259,7 @@ ul.comment-list li li {
 
 	border: #e3e3e3 1px solid;
 
-	-webkit-border-radius: 0 0 3px 3px; 
+	-webkit-border-radius: 0 0 3px 3px;
 
 	-moz-border-radius: 0 0 3px 3px;
 
@@ -3301,7 +3301,7 @@ ul.comment-list li li {
 
 	text-decoration: none;
 
-	background:none; 
+	background:none;
 
 	color:#000;
 
@@ -3363,7 +3363,7 @@ ul.comment-list li li {
 
 /* 8.10 - Google Map */
 
-#google-map { 
+#google-map {
 
 	margin: 0 0 0 0;
 
@@ -3461,7 +3461,7 @@ ul.comment-list li li {
 
 .gallery-thumbnail {
 
-	position: relative; 
+	position: relative;
 
 	overflow: hidden;
 
@@ -3493,7 +3493,7 @@ span.zoom-wrapper {
 
 	filter: alpha(opacity=0);
 
-	position: absolute; 
+	position: absolute;
 
 	width: 100%;
 
@@ -3507,19 +3507,19 @@ span.zoom-wrapper {
 
 
 
-span.zoom-wrapper span { 
+span.zoom-wrapper span {
 
-	position: absolute; 
+	position: absolute;
 
-	top: 50%; 
+	top: 50%;
 
-	left: 50%; 
+	left: 50%;
 
 	margin-left: -30px;
 
-	margin-top: -30px; 
+	margin-top: -30px;
 
-	width: 61px; 
+	width: 61px;
 
 	height: 62px;
 
@@ -3544,7 +3544,7 @@ span.zoom-wrapper span.zoom {
 	max-width: 235px;
 	position: static;
 	z-index: 101;
-	-webkit-border-radius: 2px; 
+	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	-o-border-radius: 2px;
 	border-radius: 2px;
@@ -3796,7 +3796,7 @@ html .bordertop2px {
 
 .datepicker, .page-content .datepicker {
 /*background: url(images/date.png) #fff no-repeat 96% 50% !important;
-	border: 1px solid #CDB7AB;	
+	border: 1px solid #CDB7AB;
 	padding: 4px 4px 4px 4px  !important;
 	color: #aaa  !important;
     padding: 0 5px;
@@ -3808,7 +3808,7 @@ html .bordertop2px {
 	padding: 4px 5px;
 	margin: 5px;
 	border: none !important;
-	-webkit-border-radius: 2px; 
+	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	-o-border-radius: 2px;
 	border-radius: 2px;
@@ -3832,7 +3832,7 @@ html .bordertop2px {
 	color: #fff !important;
 	padding: 10px 0px !important;
 	font-size: 18px !important;
-	-webkit-border-radius: 5px; 
+	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	-o-border-radius: 5px;
 	border-radius: 5px;
@@ -4812,7 +4812,7 @@ html .bordertop2px {
 
 	float: left;
 
-	line-height: 1;	
+	line-height: 1;
 
 }
 
@@ -4930,7 +4930,7 @@ html .wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
   text-decoration:inherit
 }
 
-li [class^="icon-"], .nav li [class^="icon-"], 
+li [class^="icon-"], .nav li [class^="icon-"],
 li [class*=" icon-"], .nav li [class*=" icon-"] {
     display: inline-block;
     width: 1.25em;
@@ -4954,9 +4954,9 @@ li [class*=" icon-"], .nav li [class*=" icon-"] {
 	font-family: FontAwesome;
 	font-size: 20px;
 	width: 1.25em;
-	text-align:center;	
+	text-align:center;
 	padding-left: 20px;
-	content: '\f041';  
+	content: '\f041';
 }
 
 .office_hours:before {
@@ -4964,9 +4964,9 @@ li [class*=" icon-"], .nav li [class*=" icon-"] {
 	font-family: FontAwesome;
 	font-size: 20px;
 	width: 1.25em;
-	text-align:center;	
+	text-align:center;
 	padding-left: 20px;
-	content: '\f017';  
+	content: '\f017';
 }
 
 .phone_number:before{
@@ -4976,7 +4976,7 @@ li [class*=" icon-"], .nav li [class*=" icon-"] {
 	padding-left: 20px;
 	width: 1.25em;
 	text-align:center;
-	content: '\f095'; 
+	content: '\f095';
 }
 .email_address:before{
 	display: inline-block;
@@ -5005,7 +5005,7 @@ li [class*=" icon-"], .nav li [class*=" icon-"] {
 	padding-left: 20px;
 	width: 1.25em;
 	text-align:center;
-	content: '\f0b1'; 
+	content: '\f0b1';
 }
 
 /*.sted_navn{margin-bottom:10px;}
@@ -5038,11 +5038,11 @@ li [class*=" icon-"], .nav li [class*=" icon-"] {
 
 
 
-/* 
+/*
 
 Make the Facebook Like box responsive (fluid width)
 
-https://developers.facebook.com/docs/reference/plugins/like-box/ 
+https://developers.facebook.com/docs/reference/plugins/like-box/
 
 */
 
@@ -5082,11 +5082,11 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
     text-decoration: none;
   }
 
-/* 
+/*
 
-This element holds injected scripts inside iframes that in 
+This element holds injected scripts inside iframes that in
 
-some cases may stretch layouts. So, we're just hiding it. 
+some cases may stretch layouts. So, we're just hiding it.
 
 */
 
@@ -5173,13 +5173,13 @@ div#navigation {
 #main-menu > li {
     margin-right: 0px;
     margin-left: 25px;
-}	
+}
 }
 
 @media all and (max-width: 1050px){
 #main-menu > li {
     margin-right: 15px;
-}	
+}
 }
 @media all and (max-width: 1024px){
 .fullwhite {
@@ -5257,5 +5257,17 @@ html .flex-caption {
 }
 html .page-content {
     padding: 20px 4% 20px 4%;
+}
+}
+@media all and (max-width: 550px){
+
+	.flex-caption h3 {
+	    font-size: 30px;
+	}
+
+}
+@media all and (max-width: 320px){
+.flex-caption h3 {
+    font-size: 24px;
 }
 }
