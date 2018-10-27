@@ -7,8 +7,9 @@ Template Name: Forside
 ?>
 <?php get_header(); ?>
 	<?php global $data; 
+	$hostel_id = $_GET['hostel_id'];
 ?>
-<?php if ($_GET['hostel_id']!=null){ ?>
+<?php if ($hostel_id!=null){ ?>
 
 
 	<?php wp_footer(); ?>
@@ -36,7 +37,7 @@ Template Name: Forside
 		
 		<!-- BEGIN .main-content -->
 		
-        
+       
         
         
         <div class="slider slider-booking" style="z-index:20">
@@ -44,8 +45,12 @@ Template Name: Forside
 			<!-- BEGIN .slides -->
 			<ul class="slides">
 	
-				<?php
-					query_posts( "post_type=event&posts_per_page=9999&order=DESC" );
+				 <?php if ($data['items_per_page']) {
+					$posts_per_page = $data['items_per_page'];
+				 } else {
+					$posts_per_page = -1;
+				 } 
+					query_posts( "post_type=event&posts_per_page=".$posts_per_page."&order=DESC" );
 
 		    		if( have_posts() ) :
 					while( have_posts() ) : the_post(); ?>
