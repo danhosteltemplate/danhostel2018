@@ -10,7 +10,7 @@ switch (ICL_LANGUAGE_CODE) {
 		$startDate = 'Check ind';
 		$endDate = 'Check ud';
 		$submitBTN = 'Søg';
-		$url = 'https://m.danhostel.dk/hostel/hostel-show-rooms';
+		$url = 'https://m.danhostel.dk/hostel/'.$data[$danhostel_id].'/select-room';
 		break;
 
 	case 'de':
@@ -19,7 +19,7 @@ switch (ICL_LANGUAGE_CODE) {
 		$startDate = 'Einchecken';
 		$endDate = 'Auschecken';
 		$submitBTN = 'Suchen';
-		$url = 'https://m.danhostel.dk/de/hostel/hostel-show-rooms';
+		$url = 'https://m.danhostel.dk/de/hostel/'.$data[$danhostel_id].'/select-room';
 		break;
 
 	case 'en':
@@ -28,7 +28,7 @@ switch (ICL_LANGUAGE_CODE) {
 		$startDate = 'Check in';
 		$endDate = 'Check out';
 		$submitBTN = 'Search';
-		$url = 'https://m.danhostel.dk/en/hostel/hostel-show-rooms';
+		$url = 'https://m.danhostel.dk/en/hostel/'.$data[$danhostel_id].'/select-room';
 		break;
 	
 	default:
@@ -37,7 +37,7 @@ switch (ICL_LANGUAGE_CODE) {
 		$startDate = 'Check ind';
 		$endDate = 'Check ud';
 		$submitBTN = 'Søg';
-		$url = 'https://m.danhostel.dk/hostel/hostel-show-rooms';
+		$url = 'https://m.danhostel.dk/en/hostel/'.$data[$danhostel_id].'/select-room';
 		break;
 	}
 ?>
@@ -47,9 +47,9 @@ switch (ICL_LANGUAGE_CODE) {
     <h2 class="page-title"><strong><?php _e($title, $DOMAIN);?></strong></h2>
     <div class="undertitle bordertop2px" style="width:100%;     margin-bottom: 10px;height:20px;"></div>
     <div class="clearfix">
-        <input name="hostel_id" value="<?php echo $data[$danhostel_id];?>" type="hidden">
-        <input type="text" id="fromdate" name="fromdate" value="<?php //_e($startDate, $DOMAIN); ?>"class="input-half datepicker" placeholder="Fra dato" />
-        <input type="text" id="todate" name="todate" value="<?php //_e($endDate, $DOMAIN); ?>" class="input-half input-half-last datepicker" placeholder="Til dato" />
+        <!--<input name="hostel_id" value="<?php echo $data[$danhostel_id];?>" type="hidden">-->
+        <input type="text" id="fromdate" name="from" value="<?php //_e($startDate, $DOMAIN); ?>"class="input-half datepicker" placeholder="Fra dato" />
+        <input type="text" id="todate" name="to" value="<?php //_e($endDate, $DOMAIN); ?>" class="input-half input-half-last datepicker" placeholder="Til dato" />
         <input name="persons" value="1" type="hidden">
         <input class="bookbutton" type="submit" value="<?php _e($submitBTN, $DOMAIN); ?>" />
     </div>
@@ -59,9 +59,9 @@ switch (ICL_LANGUAGE_CODE) {
     <h2 class="page-title"><strong><?php _e($title, $DOMAIN);?></strong></h2>
     <div class="undertitle bordertop2px" style="width:100%;     margin-bottom: 10px;height:20px;"></div>
     <div class="clearfix">
-        <input name="hostel_id" value="<?php echo $data[$danhostel_id];?>" type="hidden">
-        <input type="date" id="fromdate" name="fromdate" value="<?php //_e($startDate, $DOMAIN); ?>"class="input-half datepicker" placeholder="Fra dato" />
-        <input type="date" id="todate" name="todate" value="<?php //_e($endDate, $DOMAIN); ?>" class="input-half input-half-last datepicker" placeholder="Til dato" />
+        <!--<input name="hostel_id" value="<?php echo $data[$danhostel_id];?>" type="hidden">-->
+        <input type="date" id="fromdate" name="from" value="<?php //_e($startDate, $DOMAIN); ?>"class="input-half datepicker" placeholder="Fra dato" />
+        <input type="date" id="todate" name="to" value="<?php //_e($endDate, $DOMAIN); ?>" class="input-half input-half-last datepicker" placeholder="Til dato" />
         <input name="persons" value="1" type="hidden">
         <input class="bookbutton" type="submit" value="<?php _e($submitBTN, $DOMAIN); ?>" />
     </div>
