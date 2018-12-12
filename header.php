@@ -17,6 +17,12 @@
 		if( $data['google-analytics'] ) { 
 			echo $data['google-analytics'];
 		}
+
+		// Dislay Facebook Pixel Code
+		if( $data['fb-pixel'] ) { 
+			echo $data['fb-pixel'];
+		}
+
 		// Dislay Favicon
 
 		/*if( $data['favicon_url'] ) { 			
