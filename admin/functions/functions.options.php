@@ -490,6 +490,12 @@ $of_options[] = array( "name" => "Google Analytics Kode",
 					"id" => "google-analytics",
 					"std" => "",
 					"type" => "textarea");		
+
+$of_options[] = array( "name" => "Facebook Tracking Pixel",
+					"desc" => "",
+					"id" => "fb-pixel",
+					"std" => "",
+					"type" => "textarea");	
 	}
 	//}
 }
