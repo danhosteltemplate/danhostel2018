@@ -190,6 +190,11 @@ $of_options[] = array( "name" => "DE: Hostel ID",
 					"std" => "",
 					"type" => "text");
 
+					$of_options[] = array( "name" => "Booking Banner",
+					"desc" => "",
+					"id" => "booking_ad",
+					"type" => "upload");
+
 // Social Options
 
 $of_options[] = array( "name" => "Social Sharing",
