@@ -149,6 +149,9 @@ echo $readmore; ?> <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></
 				<?php load_template( get_template_directory() . '/includes/loop.php' ); ?>
 </div>
 </div>
+<?php if($data['booking_ad']){ ?>
+<div class="content-body leftfloater booking-banner"><img src="<?php echo $data['booking_ad']; ?>"/></div>
+<?php } ?>
 <?php 
 if($data['facebookright'] =="Nej" && $data['facebookForside'] =="Ja"){
 	load_template( get_template_directory() . '/includes/facebook-right.php' );
