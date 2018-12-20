@@ -118,6 +118,15 @@ html .booking-form .datepicker {
     		<div class="cwrapper980">
 				<!-- BEGIN #navigation -->
 				<div id="navigation" class="clearfix<?php if ( $data['nav_contact'] ) { echo ' nav-contact'; }?>">
+
+
+				<div class="logo_secondary">
+<?php if( $data['image_logo_right']!=null ) { ?>
+	<h1><a href="<?php echo $data['link_forretning']; ?>"><img style="margin-bottom:3px;" id="forretning2" height="35" src="<?php echo $data['image_logo_right']; ?>" alt="" /></a></h1>
+                     <?php } ?>
+                       
+					</div> 
+
 					<!-- BEGIN .nav-wrapper -->
 					<div class="nav-wrapper">
 					<!-- Main Menu -->
@@ -150,17 +159,16 @@ html .booking-form .datepicker {
 					<!-- END .nav-wrapper -->
 					</div>
 					<!-- END #navigation -->
-				</div>	                   
+
+
+					 
+				</div>	       
+
+				
                  				
            </div>
-		   
-<div id="title-wrapper2" class="forretning2" style="float:right; padding-top:10px;">
-<?php if ( $data['licensnogle'] == '465-894-132-489' ){
-	if( $data['image_logo_right']!=null ) { ?>
-	<h1><a href="<?php echo $data['link_forretning']; ?>"><img style="margin-bottom:3px;" id="forretning2" height="35" src="<?php echo $data['image_logo_right']; ?>" alt="" /></a></h1>
-                     <?php } } ?>
-                       <?php	do_action('icl_language_selector'); ?>
-					</div>   		   
+		   <?php	do_action('icl_language_selector'); ?>       
+  		   
 		   
          </div>
-		 <div class="clear clearfix"></div>
+		 <div class="clear clearfix"></div> 
