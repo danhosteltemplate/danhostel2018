@@ -978,7 +978,7 @@ html .flex-caption {
   border-radius: 5px;
   float: right;
   margin-top: 80px;
-  margin-bottom: 160px;
+  margin-bottom: 0px;
   padding: 20px 10px 30px 10px;
 }
 
