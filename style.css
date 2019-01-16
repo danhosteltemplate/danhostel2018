@@ -8,7 +8,7 @@ Theme URI: http://danhostel.dk
 
 Description: Danhostel Responsive
 
-Version: 4.2.2
+Version: 4.2.3
 
 Author: Danhostel - Webmaster
 
@@ -3328,6 +3328,10 @@ some cases may stretch layouts. So, we're just hiding it.
 }
 
 @media all and (max-width: 1024px) {
+	.wpml-ls-statics-shortcode_actions.wpml-ls.wpml-ls-legacy-dropdown-click.js-wpml-ls-legacy-dropdown-click {
+    top: 43px;
+    transform: translateY(0%);
+}
   .fullwhite .cwrapper980 {
     width: 100%;
     max-width: initial;
