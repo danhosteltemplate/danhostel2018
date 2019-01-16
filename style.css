@@ -3327,7 +3327,7 @@ some cases may stretch layouts. So, we're just hiding it.
   }
 }
 
-@media all and (max-width: 980px) {
+@media all and (max-width: 1024px) {
   .fullwhite .cwrapper980 {
     width: 100%;
     max-width: initial;
