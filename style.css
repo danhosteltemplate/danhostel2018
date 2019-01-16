@@ -108,7 +108,7 @@ video {
 }
 
 html .slider .slides>li {
-  min-height: 640px;
+  min-height: 520px;
   background-size: cover;
 }
 
