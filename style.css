@@ -428,7 +428,7 @@ a {
 
 html #navigation {
   float: right;
-  margin-top: 25px;
+  margin-top: 15px;
   width: initial;
 }
 
@@ -3278,12 +3278,6 @@ some cases may stretch layouts. So, we're just hiding it.
   html #navigation {
     background: transparent;
   }
-
-  div#navigation {
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-  }
 }
 
 @media all and (max-width: 1350px) {
@@ -3310,6 +3304,26 @@ some cases may stretch layouts. So, we're just hiding it.
 @media all and (max-width: 1024px) {
   .fullwhite {
     height: 186px;
+  }
+	  #main-menu {
+    display: none;
+  }
+	#navigation select {
+    display: block !important;
+  }
+	.fullwhite .cwrapper980 {
+    width: 100%;
+    max-width: initial;
+    margin-right: 0px;
+    float: left;
+    background: #628ac5;
+    margin-top: 29px;
+    box-sizing: border-box;
+  }
+
+  .nav-wrapper {
+    width: 90%;
+    padding: 0 5%;
   }
 }
 
