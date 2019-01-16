@@ -158,15 +158,6 @@ if (false !== strpos($translated, 'Howdy')) return str_replace('Howdy', 'Velkomm
 return $translated;
 }
 
-/* ------------------------------------------------
-	REPLACE WP LOGO
--------------------------------------------------*/	
-
-function admin_css() {
-echo 'The shit';
-}
- 
-add_action('admin_head','admin_css');
 
 /* ------------------------------------------------
 	REMOVE DASHBOARD WIDGETS
