@@ -3291,28 +3291,7 @@ some cases may stretch layouts. So, we're just hiding it.
     float: right;
     width: initial;
 }
-  #navigation select {
-    display: block !important;
-  }
 
-  #main-menu {
-    display: none;
-  }
-
-  .fullwhite .cwrapper980 {
-    width: 100%;
-    max-width: initial;
-    margin-right: 0px;
-    float: left;
-    background: #628ac5;
-    margin-top: 29px;
-    box-sizing: border-box;
-  }
-
-  .nav-wrapper {
-    width: 90%;
-    padding: 0 5%;
-  }
 }
 
 @media all and (max-width: 1150px) {
