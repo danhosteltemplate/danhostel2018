@@ -139,7 +139,7 @@ table {
 	
 }
 
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1024px) {
 		.page-title strong{border:none !important;}
 
 	#main-menu {
