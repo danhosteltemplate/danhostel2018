@@ -404,10 +404,9 @@ a {
 }
 
 #title-wrapper2 {
-  z-index: 9999;
-  position: absolute;
-  right: 85px;
-  top: 1px;
+    z-index: 9999;
+    position: static;
+    float: right;
 }
 
 .section.clearfix {
@@ -3288,6 +3287,10 @@ some cases may stretch layouts. So, we're just hiding it.
 }
 
 @media all and (max-width: 1350px) {
+	.fullwhite > .cwrapper980 {
+    float: right;
+    width: initial;
+}
   #navigation select {
     display: block !important;
   }
