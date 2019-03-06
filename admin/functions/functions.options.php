@@ -195,6 +195,11 @@ $of_options[] = array( "name" => "DE: Hostel ID",
 					"id" => "booking_ad",
 					"type" => "upload");
 
+					$of_options[] = array( "name" => "Booking URL",
+					"desc" => "",
+					"id" => "booking_ad_url",
+					"type" => "text");
+
 // Social Options
 
 $of_options[] = array( "name" => "Social Sharing",
