@@ -8,7 +8,7 @@ Theme URI: http://danhostel.dk
 
 Description: Danhostel Responsive
 
-Version: 4.2.3
+Version: 4.2.4
 
 Author: Danhostel - Webmaster
 
@@ -1182,7 +1182,10 @@ ol ol li {
   list-style-image: url(images/list2-footer.png);
   list-style-position: inside;
 }
-
+.booking-banner img {
+  max-width: 100%;
+  display: block;
+}
 .sidebar #lang_sel ul li {
   list-style: none !important;
 }
