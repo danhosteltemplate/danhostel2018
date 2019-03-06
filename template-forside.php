@@ -150,7 +150,7 @@ echo $readmore; ?> <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></
 </div>
 </div>
 <?php if($data['booking_ad']){ ?>
-<div class="content-body leftfloater booking-banner"><img src="<?php echo $data['booking_ad']; ?>"/></div>
+<div class="content-body leftfloater booking-banner"><?php if($data['booking_ad_url']){ ?><a href="<?php echo $data['booking_ad_url']; ?>" target="_blank"><img src="<?php echo $data['booking_ad']; ?>"/></a><?php } ?></div>
 <?php } ?>
 <?php 
 if($data['facebookright'] =="Nej" && $data['facebookForside'] =="Ja"){
