@@ -8,7 +8,7 @@ Theme URI: http://danhostel.dk
 
 Description: Danhostel Responsive
 
-Version: 4.3.1
+Version: 4.4
 
 Author: Danhostel - Webmaster
 
@@ -166,6 +166,72 @@ div#navigation .nav-wrapper {
   margin-top: 10px;
   margin-left: 10px;
 }
+
+#gdpr-box {
+  display: none;
+  width: 100%;
+  background: #0779bf;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+.gdcontent {
+  float: left;
+  margin-right: 150px;
+}
+  #gdpr-box p {
+    padding: 0px;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 0;
+    margin: 0px;
+}
+#gdpr-box h2 {
+  font-size: 16px;
+  font-weight: 800;
+}
+html #gdpr-box button.gdpr-button-accept {
+  float: right;
+  margin: 0px;
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  padding: 10px;
+}
+  #gdpr-box a {
+  color: #fff;
+  }
+  #gdpr-box button.gdpr-button-accept {
+  background: none;
+  color: #fff;
+  font-size: 12px;
+  }
+  #gdpr-box button.gdpr-button-accept,
+  #gdpr-box a.gdpr-button-settings {
+  display: inline-block;
+  border: 1px solid #fff;
+  padding: 6px 5px 4px;
+  text-decoration: none;
+  margin: 0 0 20px 20px;
+  border-radius: 2px;
+  font-weight: 800;
+  font-size: 12px;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  }
+  #gdpr-box button.gdpr-button-accept:hover {
+  cursor: pointer;
+  }
+  #gdpr-box button.gdpr-button-accept:hover,
+  #gdpr-box a.gdpr-button-settings:hover {
+  background: #ff0000;
+  }
 
 body {
   line-height: 1;
@@ -3369,6 +3435,17 @@ some cases may stretch layouts. So, we're just hiding it.
     margin-bottom: 0px;
     z-index: 9;
   }
+
+  .gdcontent {
+    float: left;
+    margin-right: 0px;
+}
+html #gdpr-box button.gdpr-button-accept {
+  position: static;
+  float: left;
+  width: 100%;
+  margin-top: 40px;
+}
 
   html .slider .slides>li {
     min-height: 515px;
