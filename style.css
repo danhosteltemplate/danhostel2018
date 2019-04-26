@@ -8,7 +8,7 @@ Theme URI: http://danhostel.dk
 
 Description: Danhostel Responsive
 
-Version: 4.4
+Version: 4.5
 
 Author: Danhostel - Webmaster
 
@@ -166,6 +166,13 @@ div#navigation .nav-wrapper {
   margin-top: 10px;
   margin-left: 10px;
 }
+.gdbttcontent {
+  float: right;
+  top: 20px;
+  position: absolute;
+  right: 40px;
+  top: 50%;
+}
 
 #gdpr-box {
   display: none;
@@ -174,7 +181,7 @@ div#navigation .nav-wrapper {
   color: #fff;
   position: fixed;
   bottom: 0;
-  z-index: 999;
+  z-index: 9999;
   padding: 20px 40px;
   box-sizing: border-box;
 }
@@ -196,11 +203,22 @@ div#navigation .nav-wrapper {
 html #gdpr-box button.gdpr-button-accept {
   float: right;
   margin: 0px;
-  transform: translateY(-50%);
-  position: absolute;
-  top: 50%;
-  right: 40px;
+  /* transform: translateY(-50%); */
+  position: static;
+  /* top: 50%; */
+  /* right: 40px; */
   padding: 10px;
+}
+button.gdpr-button-reject {
+  background: transparent;
+  color: #fff;
+  border: none;
+  outline: none;
+  float: right;
+  position: relative;
+  top: -7px;
+  text-decoration: underline;
+  margin-right: 10px;
 }
   #gdpr-box a {
   color: #fff;
@@ -230,7 +248,7 @@ html #gdpr-box button.gdpr-button-accept {
   }
   #gdpr-box button.gdpr-button-accept:hover,
   #gdpr-box a.gdpr-button-settings:hover {
-  background: #ff0000;
+  background: #84c61c ;
   }
 
 body {
@@ -3435,7 +3453,10 @@ some cases may stretch layouts. So, we're just hiding it.
     margin-bottom: 0px;
     z-index: 9;
   }
-
+  .gdbttcontent {
+    position: static;
+    width: 100%;
+}
   .gdcontent {
     float: left;
     margin-right: 0px;
