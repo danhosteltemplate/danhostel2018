@@ -39,7 +39,12 @@
 		<h2>Vi anvender cookies til at forbedre oplevelsen på vores side.</h2>
 		<p>Du accepterer ved at fortsætte</p>
 	</div>
+	<div class="gdbttcontent">
+
 	<button class="gdpr-button-accept">OK, jeg accepterer</button>
+	<button class="gdpr-button-reject">Nej tak</button>
+	
+	</div>
 </div>
 
 
