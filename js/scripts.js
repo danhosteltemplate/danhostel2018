@@ -330,6 +330,9 @@ jQuery(window).load(function(){
 				}
 			return false;
 		});
+		jQuery('.gdpr-button-reject').click(function(){
+			jQuery('#gdpr-box').fadeOut('slow'); 
+		});
 	
 		// If the cookie is true, don't show the cookie bar
 		if (!jQuery.cookie('cookiebar') == 1) {
