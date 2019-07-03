@@ -117,6 +117,11 @@ $of_options[] = array( "name" => "Google 360 eller YouTube",
 					"std" => "",
 					"type" => "textarea");
 
+					$of_options[] = array( "name" => "Google Map API",
+					"desc" => "",
+					"id" => "gmap-api",
+					"std" => "",
+					"type" => "text");
 					
 $of_options[] = array( "name" => "Google Map Latitude",
 					"desc" => "",
