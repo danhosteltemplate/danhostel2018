@@ -43,9 +43,14 @@ function googlemap_shortcode( $atts, $content = null ) {
 	$output = '';
 	
 	// GOOGLE MAP API HERE
-	
+	global $data;
+	if( isset($data['gmap-api']) ) {
+		$gapi = $data['gmap-api'];
+	} else {
+		$gapi = 'AIzaSyB2jhR794akD1be1uqgKoA5hq5mEf7b-zc';
+	}
 	$output .= '<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2jhR794akD1be1uqgKoA5hq5mEf7b-zc&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key='.$gapi.'&callback=initMap">
     </script>';
 	
 	// GOOGLE MAP API HERE
