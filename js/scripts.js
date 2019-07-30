@@ -5,10 +5,10 @@ jQuery('.booking-form.hidden #fromdate')[0].valueAsDate = new Date();
 jQuery('.booking-form.hidden #fromdate').change(function() {
   var date= this.valueAsDate;
   date.setDate(date.getDate() + 1);
-  jQuery('.booking-form.hidden #todate')[0].valueAsDate = date;
+  //jQuery('.booking-form.hidden #todate')[0].valueAsDate = date;
 });
 
-jQuery('.booking-form.hidden #fromdate').change();
+//jQuery('.booking-form.hidden #fromdate').change();
 
 	// Accordion
 	jQuery(".accordion").accordion( { autoHeight: false } );
@@ -123,8 +123,8 @@ if( !isMobile.any() ) {
             var m = date.getMonth();
            	var y = date.getFullYear();
             var nextDate = new Date(y, m, d + 1);
-			jQuery("#todate").datepicker('option','minDate', selectedDate);
-            jQuery("#todate").datepicker('setDate', nextDate);
+		//	jQuery("#todate").datepicker('option','minDate', selectedDate);
+            //jQuery("#todate").datepicker('setDate', nextDate);
 			}
 			}
 		});
