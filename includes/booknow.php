@@ -43,7 +43,7 @@ switch (ICL_LANGUAGE_CODE) {
 ?>
 
 
-<form class="booking-form booking-validation" name="bookroom" method="get" action="<?php echo $url; ?>">
+<form class="booking-form booking-validation" name="bookroom" method="get" action="<?php echo $url; ?>" autocomplete="off">
     <h2 class="page-title"><strong><?php _e($title, $DOMAIN);?></strong></h2>
     <div class="undertitle bordertop2px" style="width:100%;     margin-bottom: 10px;height:20px;"></div>
     <div class="clearfix">
