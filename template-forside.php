@@ -77,25 +77,7 @@ Template Name: Forside
 								echo wp_trim_words( $content, 40 ); ?>
 								</p>
 								
-								<span class="more-link">
-								<?php 
-								global $data; 
-static $DOMAIN = 'qns';
-switch(ICL_LANGUAGE_CODE){
-	case 'dk':
-		$readmore = 'Læs mere';
-	break;
-	case 'en':
-		$readmore = 'Read more';
-	break;
-	case 'de':
-		$readmore = 'Lesen Sie mehr';
-	break;
-	default:
-		$readmore = 'Læs mere';
-	break;
-} 
-echo $readmore; ?> <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+								<span class="more-link"><?php echo __('Læs mere','danhostel');?><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
 								
 								
 								</div>
