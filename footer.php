@@ -6,9 +6,13 @@
 
 			<p style="text-align:center">
 				<?php // Display footer message
-
-									_e('<a href="http://www.danhostel.dk" style="text-align:center">&copy; Copyright www.danhostel.dk</a>','qns');
-							?> - <a href="https://www.danhostel.dk/persondatapolitik" class="footer-terms">Danhostels persondatapolitik</a>
+echo '<a href="http://www.danhostel.dk" style="text-align:center">';
+                                    echo __('&copy; Copyright www.danhostel.dk','danhostel');
+                                   echo '</a>';
+							echo ' - <a href="https://www.danhostel.dk/persondatapolitik" class="footer-terms">';
+                            echo __('Danhostels persondatapolitik','danhostel');
+                          echo '  </a>'; ?>
+									
 			</p>
 
 			<!-- END #footer-bottom -->
