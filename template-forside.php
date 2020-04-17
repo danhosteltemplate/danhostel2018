@@ -156,6 +156,15 @@ load_template( get_template_directory() . '/includes/nyheder-right.php' );
 			echo '</div>';
 			load_template( get_template_directory() . '/includes/map.php' );
 			echo '</div>';
+
+			if ( is_active_sidebar( 'primary' ) ) : 
+				echo '<div class="content-body leftfloater"><div class="borderino" style="padding-bottom:20px;">';
+				dynamic_sidebar( 'primary' ); 
+				echo '</div></div>';
+			else : 
+				
+			endif;
+
           	if($data['facebookForside']=="Nej" && $data['facebookright']=="Ja") { 
           		load_template( get_template_directory() . '/includes/facebook-right.php' ); 
           	}elseif($data['facebookright'] =="Ja" && $data['facebookForside'] =="Ja"){echo '<div class="content-body leftfloater"><div class="borderino"><h2>Facebook kan ikke ligge to steder<h2></div></div>';}
