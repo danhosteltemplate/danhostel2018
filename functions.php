@@ -11,6 +11,22 @@ $role_object = get_role( 'editor' );
 // add $cap capability to this role object
 $role_object->add_cap( 'edit_theme_options' );
 
+add_action( 'widgets_init', 'my_register_sidebars' );
+function my_register_sidebars() {
+    /* Register the 'primary' sidebar. */
+    register_sidebar(
+        array(
+            'id'            => 'primary',
+            'name'          => __( 'Custom Message' ),
+            'description'   => __( 'place your custom message widgets here.' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2 class="page-title"><strong class="borderbottom2px" style="padding-bottom:12px;">',
+            'after_title'   => '</strong></h2><div class="undertitle bordertop2px" style="width:100%; height:13px;"></div>',
+        )
+    );
+    /* Repeat register_sidebar() code for additional sidebars. */
+}
 
 if ( ! isset( $content_width ) ) $content_width = 640;
 
