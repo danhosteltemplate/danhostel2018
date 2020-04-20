@@ -153,6 +153,8 @@ section {
 }
 .content-body .widget {
     padding: 20px 25px;
+	background: #fff;
+	    margin-top: 20px;
 }
 .booking-form .datepicker {
   width: 46% !important;
