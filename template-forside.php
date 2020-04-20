@@ -158,9 +158,9 @@ load_template( get_template_directory() . '/includes/nyheder-right.php' );
 			echo '</div>';
 
 			if ( is_active_sidebar( 'primary' ) ) : 
-				echo '<div class="content-body leftfloater"><div class="borderino" style="padding-bottom:20px;">';
+				echo '<div class="content-body leftfloater" style="margin-top:0px;">';
 				dynamic_sidebar( 'primary' ); 
-				echo '</div></div>';
+				echo '</div>';
 			else : 
 				
 			endif;
