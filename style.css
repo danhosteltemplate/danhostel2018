@@ -156,7 +156,7 @@ section {
 	background: #fff;
 	    margin-top: 20px;
 }
-.textwidget img {
+html .textwidget img {
     padding: 0px;
     margin: 0px;
 }
