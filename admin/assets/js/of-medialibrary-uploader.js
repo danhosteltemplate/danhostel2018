@@ -18,7 +18,7 @@
   
     removeFile: function () {
      
-     $('.mlu_remove_button').live('click', function(event) { 
+     $('.mlu_remove_button').on('click', 'a', function(event) { 
 			var clickedObject = $(this);
 	 		var theID = $(this).attr('title');
 				var image_to_remove = $('#image_' + theID);
@@ -72,7 +72,7 @@
 		btnContent = true,
 		tbframe_interval;
 		// On Click
-		$('.media_upload_button').live("click", function () {
+		$('.media_upload_button').on('click', 'a', function () {
 		clickedObject = $(this);
         formfield = $(this).parent().prev('input').attr('id');
         formID = $(this).attr('rel');
