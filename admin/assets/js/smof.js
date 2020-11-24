@@ -206,7 +206,7 @@ jQuery(document).ready(function($){
 	of_image_upload();
 			
 	//AJAX Remove Image (clear option value)
-	$('.image_reset_button').live('click', function(){
+	$('.image_reset_button').on('click', 'a', function(){
 	
 		var clickedObject = $(this);
 		var clickedID = $(this).attr('id');
@@ -247,6 +247,16 @@ jQuery(document).ready(function($){
 					
 	}); 
 
+	jQuery.browser = {};
+(function () {
+    jQuery.browser.msie = false;
+    jQuery.browser.version = 0;
+    if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+        jQuery.browser.msie = true;
+        jQuery.browser.version = RegExp.$1;
+    }
+})();
+
 	// Style Select
 	(function ($) {
 	styleSelect = {
@@ -254,7 +264,7 @@ jQuery(document).ready(function($){
 		$('.select_wrapper').each(function () {
 			$(this).prepend('<span>' + $(this).find('.select option:selected').text() + '</span>');
 		});
-		$('.select').live('change', function () {
+		$('.select').on('vhange', 'a', function () {
 			$(this).prev('span').replaceWith('<span>' + $(this).find('option:selected').text() + '</span>');
 		});
 		$('.select').bind($.browser.msie ? 'click' : 'change', function(event) {
@@ -274,7 +284,7 @@ jQuery(document).ready(function($){
 	$(".slide_body").hide(); 
 
 	//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
-	$(".slide_edit_button").live( 'click', function(){
+	$(".slide_edit_button").on('click', 'a', function(){
 		$(this).parent().toggleClass("active").next().slideToggle("fast");
 		return false; //Prevent the browser jump to the link anchor
 	});	
@@ -291,13 +301,13 @@ jQuery(document).ready(function($){
 		return true;
 	}
 	
-	$('.of-slider-title').live('keyup', function(){
+	$('.of-slider-title').on('keyup', 'a', function(){
 		update_slider_title(this);
 	});
 		
 	
 	//Remove individual slide
-	$('.slide_delete_button').live('click', function(){
+	$('.slide_delete_button').on('click', 'a', function(){
 	// event.preventDefault();
 	var agree = confirm("Are you sure you wish to delete this slide?");
 		if (agree) {
@@ -316,7 +326,7 @@ jQuery(document).ready(function($){
 	});
 	
 	//Add new slide
-	$(".slide_add_button").live('click', function(){		
+	$(".slide_add_button").on('click', 'a', function(){		
 		var slidesContainer = $(this).prev();
 		var sliderId = slidesContainer.attr('id');
 		var sliderInt = $('#'+sliderId).attr('rel');
@@ -379,7 +389,7 @@ jQuery(document).ready(function($){
 	
 	/**	Ajax Backup & Restore MOD */
 	//backup button
-	$('#of_backup_button').live('click', function(){
+	$('#of_backup_button').on('click', 'a', function(){
 	
 		var answer = confirm("Click OK to backup your current saved options.")
 		
@@ -426,7 +436,7 @@ jQuery(document).ready(function($){
 	}); 
 	
 	//restore button
-	$('#of_restore_button').live('click', function(){
+	$('#of_restore_button').on('click', 'a', function(){
 	
 		var answer = confirm("'Warning: All of your current options will be replaced with the data from your last backup! Proceed?")
 		
@@ -473,7 +483,7 @@ jQuery(document).ready(function($){
 	});
 	
 	/**	Ajax Transfer (Import/Export) Option */
-	$('#of_import_button').live('click', function(){
+	$('#of_import_button').on('click', 'a', function(){
 	
 		var answer = confirm("Click OK to import options.")
 		
@@ -521,7 +531,7 @@ jQuery(document).ready(function($){
 	});
 	
 	/** AJAX Save Options */
-	$('#of_save').live('click',function() {
+	$('#of_save').on('click', 'a', function() {
 			
 		var nonce = $('#security').val();
 					
