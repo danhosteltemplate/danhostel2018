@@ -1,5 +1,5 @@
                     <?php 	 global $data; 
-if( ($data['visturistinfo']!="Nej") && ($data['turistinfo']!="") && ($data['turistlink']!="") ) { ?>
+if( (get_field('er_din_vandrerhjem_kursus_certificeret','option')!="Nej") && (get_field('turist_info','option')!="") && ($data['turistlink']!="") ) { ?>
              
 						
                         
@@ -17,7 +17,7 @@ if( ($data['visturistinfo']!="Nej") && ($data['turistinfo']!="") && ($data['turi
                           </div>    
                           
                           						<?php // Get the Thumbnail URL?>
-							<a href="<?php echo $data['turistlink']; ?>"><img src="<?php echo $data['turistinfo']; ?>" alt="" class="prev-image" style="margin-bottom:-6px;"/></a>
+							<a href="<?php the_field('turist_info_url','option'); ?>"><img src="<?php the_field('turist_info','option'); ?>" alt="" class="prev-image" style="margin-bottom:-6px;"/></a>
 												</div>
 
                                
