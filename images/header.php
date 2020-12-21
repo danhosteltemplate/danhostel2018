@@ -144,7 +144,7 @@
 
 						<h1>
 
-							<a href="<?php echo home_url(); ?>"><img src="<?php echo $data['image_logo']; ?>" alt="" /></a>
+							<a href="<?php echo home_url(); ?>"><img src="<?php the_field('image_logo','option'); ?>" alt="" /></a>
 
 						</h1>
 
@@ -154,15 +154,15 @@
 
 
 
-                    <?php 				if ( $data['licensnogle'] == '465-894-132-489' ){
+                    <?php 				if ( get_field('licensnogle','option') == '465-894-132-489' ){
 
 
 
-						if( $data['image_logo_right']!=null ) { ?>
+						if( get_field('image_logo_right','option')!=null ) { ?>
 
 						<h1>
 
-							<a href="<?php echo $data['link_forretning']; ?>"><img style="margin-bottom:3px;" id="forretning2" height="35" src="<?php echo $data['image_logo_right']; ?>" alt="" /></a>
+							<a href="<?php the_field('link_forretning','option'); ?>"><img style="margin-bottom:3px;" id="forretning2" height="35" src="<?php the_field('image_logo_right','option'); ?>" alt="" /></a>
 
 						</h1>
 
