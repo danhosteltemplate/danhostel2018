@@ -7,7 +7,7 @@ Template Name: Forside
 ?>
 <?php get_header(); ?>
 	<?php global $data; 
-	$hostel_id = $_GET['hostel_id'];
+	$hostel_id = get_field('hostel_id','option');
 ?>
 <?php if ($hostel_id!=null){ ?>
 
@@ -15,15 +15,15 @@ Template Name: Forside
 	<?php wp_footer(); ?>
 
  <?php if(ICL_LANGUAGE_CODE=='da') {?>
- <iframe src="http://m.danhostel.dk/hostel/hostel-show-rooms?hostel_id=<?php  echo $data['hostel_id'];?>&fromdate=<?php _e($_GET['fromdate']);?>&todate=<?php _e($_GET['todate']);?>&persons=1" width="100%" frameborder="0" style="min-height:7500px; width:100%">
+ <iframe src="http://m.danhostel.dk/hostel/hostel-show-rooms?hostel_id=<?php  the_field('hostel_id','option');?>&fromdate=<?php _e($_GET['fromdate']);?>&todate=<?php _e($_GET['todate']);?>&persons=1" width="100%" frameborder="0" style="min-height:7500px; width:100%">
 <?php } ?>                    
                   
 <?php if(ICL_LANGUAGE_CODE=='en') {?>
- <iframe src="http://m.danhostel.dk/en/hostel/hostel-show-rooms?hostel_id=<?php  echo $data['hostel_id_en'];?>&fromdate=<?php _e($_GET['fromdate']);?>&todate=<?php _e($_GET['todate']);?>&persons=1" width="100%" frameborder="0" style="min-height:7500px; width:100%">
+ <iframe src="http://m.danhostel.dk/en/hostel/hostel-show-rooms?hostel_id=<?php  the_field('en:_hostel_id','option');?>&fromdate=<?php _e($_GET['fromdate']);?>&todate=<?php _e($_GET['todate']);?>&persons=1" width="100%" frameborder="0" style="min-height:7500px; width:100%">
 <?php } ?>                    
 
 <?php if(ICL_LANGUAGE_CODE=='de') {?>
- <iframe src="http://m.danhostel.dk/de/hostel/hostel-show-rooms?hostel_id=<?php  echo $data['hostel_id_de'];?>&fromdate=<?php _e($_GET['fromdate']);?>&todate=<?php _e($_GET['todate']);?>&persons=1" width="100%" frameborder="0" style="min-height:7500px; width:100%">
+ <iframe src="http://m.danhostel.dk/de/hostel/hostel-show-rooms?hostel_id=<?php  the_field('de:_hostel_id','option');?>&fromdate=<?php _e($_GET['fromdate']);?>&todate=<?php _e($_GET['todate']);?>&persons=1" width="100%" frameborder="0" style="min-height:7500px; width:100%">
  <?php } ?>       
 		</div>
 
@@ -45,8 +45,8 @@ Template Name: Forside
 			<!-- BEGIN .slides -->
 			<ul class="slides">
 	
-				 <?php if ($data['items_per_page']) {
-					$posts_per_page = $data['items_per_page'];
+				 <?php if ( get_field('hvor_mange_nyheder_skal_vi_vise_i_oversigtsiden','option') ) {
+					$posts_per_page = get_field('hvor_mange_nyheder_skal_vi_vise_i_oversigtsiden','option');
 				 } else {
 					$posts_per_page = -1;
 				 } 
@@ -100,8 +100,8 @@ Template Name: Forside
 		
     <div class="booknow-wrapper">
     <div class="clearfix">
-         <?php if ( $data['licensnogle'] == '465-894-132-489' ){
-					if( $data['bookingboksen']!="Nej" ) {   load_template( get_template_directory() . '/includes/booknow.php' ); }
+         <?php if ( get_field('licensnogle','option') == '465-894-132-489' ){
+					if( get_field('skal_booking_boksen_vaere_tilgaengelig','option')!="Nej" ) {   load_template( get_template_directory() . '/includes/booknow.php' ); }
 					}
 				else { load_template( get_template_directory() . '/includes/booknow.php' );          } ?>
 		<!-- END .slider -->
@@ -131,17 +131,17 @@ Template Name: Forside
 				<?php load_template( get_template_directory() . '/includes/loop.php' ); ?>
 </div>
 </div>
-<?php if($data['booking_ad']){ ?>
-<div class="content-body leftfloater booking-banner"><?php if($data['booking_ad_url']){ ?><a href="<?php echo $data['booking_ad_url']; ?>" target="_blank"><img src="<?php echo $data['booking_ad']; ?>"/></a><?php } ?></div>
+<?php if(get_field('booking_banner','option')){ ?>
+<div class="content-body leftfloater booking-banner"><?php if(get_field('booking_banner','option')){ ?><a href="<?php the_field('booking_url','option'); ?>" target="_blank"><img src="<?php the_field('booking_banner','option'); ?>"/></a><?php } ?></div>
 <?php } ?>
 <?php 
-if($data['facebookright'] =="Nej" && $data['facebookForside'] =="Ja"){
+if(get_field('vis_facebook_nyhedsboksen_i_hojre_kolonne','option') =="Nej" && get_field('vis_facebook_nyhedsboksen_midt_pa_forsiden','option') =="Ja"){
 	load_template( get_template_directory() . '/includes/facebook-right.php' );
-}elseif($data['facebookright'] =="Ja" && $data['facebookForside'] =="Ja"){echo '<div class="content-body leftfloater"><div class="borderino"><h2>Facebook kan ikke ligge to steder<h2></div></div>';}
+}elseif(get_field('vis_facebook_nyhedsboksen_i_hojre_kolonne','option') =="Ja" && get_field('vis_facebook_nyhedsboksen_midt_pa_forsiden','option') =="Ja"){echo '<div class="content-body leftfloater"><div class="borderino"><h2>Facebook kan ikke ligge to steder<h2></div></div>';}
 else{}
 ?>
 <?php 
-if($data['nyhedleft'] =="Ja"){
+if(get_field('skal_nyhedsboksen_vises_pa_forsiden','option') =="Ja"){
 load_template( get_template_directory() . '/includes/nyheder-right.php' ); 
 }else{}
 ?>
@@ -149,7 +149,7 @@ load_template( get_template_directory() . '/includes/nyheder-right.php' );
 
 <!-- BEGIN Right Column -->      
       <div class="one-third last-col">               
-          	<?php if( $data['quicklinksforside']!="Nej" ) { load_template( get_template_directory() . '/includes/quicklinks.php' ); }
+          	<?php if( get_field('quicklinksforside','option')!="Nej" ) { load_template( get_template_directory() . '/includes/quicklinks.php' ); }
 			echo '<div class="content-body leftfloater">';
 			echo '<div class="borderino">';
 			load_template( get_template_directory() . '/includes/kontaktos.php' ); 
@@ -165,9 +165,9 @@ load_template( get_template_directory() . '/includes/nyheder-right.php' );
 				
 			endif;
 
-          	if($data['facebookForside']=="Nej" && $data['facebookright']=="Ja") { 
+          	if(get_field('vis_facebook_nyhedsboksen_i_hojre_kolonne','option')=="Nej" && $data['facebookright']=="Ja") { 
           		load_template( get_template_directory() . '/includes/facebook-right.php' ); 
-          	}elseif($data['facebookright'] =="Ja" && $data['facebookForside'] =="Ja"){echo '<div class="content-body leftfloater"><div class="borderino"><h2>Facebook kan ikke ligge to steder<h2></div></div>';}
+          	}elseif(get_field('vis_facebook_nyhedsboksen_i_hojre_kolonne','option') =="Ja" && $data['facebookForside'] =="Ja"){echo '<div class="content-body leftfloater"><div class="borderino"><h2>Facebook kan ikke ligge to steder<h2></div></div>';}
           	else{}
           	load_template( get_template_directory() . '/includes/ikoner.php' ); 
           	load_template( get_template_directory() . '/includes/ratingwidget.php' );
