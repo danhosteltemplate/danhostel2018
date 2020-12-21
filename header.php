@@ -21,8 +21,8 @@
 		}
 
 		// Dislay Facebook Pixel Code
-		if( $data['fb-pixel'] ) { 
-			echo $data['fb-pixel'];
+		if( get_field('fb-pixel','option') ) { 
+			the_field('fb-pixel','option');
 		}
 
 		// Dislay Favicon
