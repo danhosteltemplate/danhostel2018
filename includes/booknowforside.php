@@ -21,9 +21,9 @@
  <?php } ?>                    
 
 					<div class="clearfix">
-                    	<input name="hostel_id" value="<?php if(ICL_LANGUAGE_CODE=='da') {echo $data['hostel_id'];}
-					if(ICL_LANGUAGE_CODE=='en') { echo $data['hostel_id_en'];}
-					if(ICL_LANGUAGE_CODE=='de') { echo $data['hostel_id_de'];} ?>" type="hidden">
+                    	<input name="hostel_id" value="<?php if(ICL_LANGUAGE_CODE=='da') { the_field('hostel_id','option'); }
+					if(ICL_LANGUAGE_CODE=='en') { the_field('en:_hostel_id','option');}
+					if(ICL_LANGUAGE_CODE=='de') { the_field('de:_hostel_id','option');} ?>" type="hidden">
 
 						<input type="date" id="fromdate" name="fromdate" value="<?php if(ICL_LANGUAGE_CODE=='da') {_e('Check ind','qns');}
 					if(ICL_LANGUAGE_CODE=='en') {_e('Check in','qns'); }
