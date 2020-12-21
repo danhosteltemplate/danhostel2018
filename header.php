@@ -124,7 +124,7 @@ if ( wp_is_mobile() ) { ?>
 									echo '<h2 class="danhostelFontStyle">Danhostel</h2>';
 									echo '<h2 class="danhostelFontStyleHostel">'.substr($blog_title,10).'</h2>';
 									echo '</a></div>';
-								}else{*/echo '<a href="' . home_url() . '"><img src="' . $data['image_logo']. '" alt="" /></a>';//}
+								}else{*/echo '<a href="' . home_url() . '"><img src="' . get_field('image_logo','option'). '" alt="" /></a>';//}
 							?>
             </div>
             
@@ -136,9 +136,9 @@ if ( wp_is_mobile() ) { ?>
 
 
                     <div class="logo_secondary">
-                        <?php if( $data['image_logo_right']!=null ) { ?>
-                        <h1><a href="<?php echo $data['link_forretning']; ?>"><img style="margin-bottom:3px;" id="forretning2"
-                                    height="35" src="<?php echo $data['image_logo_right']; ?>" alt="" /></a></h1>
+                        <?php if( get_field('image_logo_right','option')!=null ) { ?>
+                        <h1><a href="<?php the_field('link_forretning','option'); ?>"><img style="margin-bottom:3px;" id="forretning2"
+                                    height="35" src="<?php the_field('image_logo_right','option'); ?>" alt="" /></a></h1>
                         <?php } ?>
 
                     </div>
