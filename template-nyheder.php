@@ -44,7 +44,7 @@ switch (ICL_LANGUAGE_CODE) {
 			<div class="undertitle bordertop2px" style="width:100%; height:13px;"></div>
 					<?php the_content(); ?>
 					<?php
-						$event_perpage = 9999;//$data['items_per_page'];
+						$event_perpage = get_field('hvor_mange_nyheder_skal_vi_vise_i_oversigtsiden','option');
 						$paged = 0;
 						query_posts( "post_type=event&posts_per_page=$event_perpage" );
 						$c=0;
@@ -75,7 +75,7 @@ switch (ICL_LANGUAGE_CODE) {
                <!-- END .two thirds -->
 			</div></div>
                     <div class="one-third last-col">
-                    <?php if( $data['bookingboksen']=="Ja" ){
+                    <?php if( get_field('skal_booking_boksen_vaere_tilgaengelig','option')=="Ja" ){
 						echo '<div class="content-body leftfloater">';
 						echo '<div class="borderino">';
 						echo '<div class="booknow-left">';
@@ -84,7 +84,7 @@ switch (ICL_LANGUAGE_CODE) {
 						echo '</div>';
 						echo '</div>';
 						}?>
-						<?php if( $data['quicklinksallesider']=="Ja" ) { load_template( get_template_directory() . '/includes/quicklinks.php' ); } ?>
+						<?php if( get_field('quicklinksallesider','option')=="Ja" ) { load_template( get_template_directory() . '/includes/quicklinks.php' ); } ?>
 						<?php
 						echo '<div class="content-body leftfloater">';
 						echo '<div class="borderino">';
