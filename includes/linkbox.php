@@ -1,7 +1,7 @@
                     <?php 	 global $data; 
  
 						?>
-                         <?php if ( $data['text1'] ) { ?>
+                         <?php if ( get_field('text1','option') ) { ?>
 <div class="content-body leftfloater">                    
 
 							<div class="borderino" style="padding-bottom:0px;">
@@ -18,9 +18,9 @@
 					if(ICL_LANGUAGE_CODE=='en') {_e('Planing another vacation in Denmark: try one of our fantastic Danhostels like for example:','qns'); }
 					if(ICL_LANGUAGE_CODE=='de') {_e('Andere Danhostels:','qns'); } ?>	
                                 <ul>
-                                <li><a href="<?php _e($data['link1'],'qns'); ?>" target="_blank"><?php _e($data['text1'],'qns'); ?></a></li>
-                                <li><a href="<?php _e($data['link2'],'qns'); ?>" target="_blank"><?php _e($data['text2'],'qns'); ?></a></li>
-                                <li><a href="<?php _e($data['link3'],'qns'); ?>" target="_blank"><?php _e($data['text3'],'qns'); ?></a></li>
+                                <li><a href="<?php the_field('link1','option'); ?>" target="_blank"><?php the_field('text1','option'); ?></a></li>
+                                <li><a href="<?php the_field('link2','option'); ?>" target="_blank"><?php the_field('text2','option'); ?></a></li>
+                                <li><a href="<?php the_field('link3','option'); ?>" target="_blank"><?php the_field('text3','option'); ?></a></li>
                                 </ul>
 							<!-- END .event-prev -->
 							</div>
