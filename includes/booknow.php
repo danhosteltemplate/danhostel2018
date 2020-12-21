@@ -10,7 +10,7 @@ switch (ICL_LANGUAGE_CODE) {
 		$startDate = 'Check ind';
 		$endDate = 'Check ud';
 		$submitBTN = 'Søg';
-		$url = 'https://m.danhostel.dk/hostel/'.$data[$danhostel_id].'/select-room';
+		$url = 'https://m.danhostel.dk/hostel/'.get_field('hostel_id','option').'/select-room';
 		break;
 
 	case 'de':
@@ -19,7 +19,7 @@ switch (ICL_LANGUAGE_CODE) {
 		$startDate = 'Einchecken';
 		$endDate = 'Auschecken';
 		$submitBTN = 'Suchen';
-		$url = 'https://m.danhostel.dk/de/hostel/'.$data[$danhostel_id].'/select-room';
+		$url = 'https://m.danhostel.dk/de/hostel/'.get_field('de:_hostel_id','option').'/select-room';
 		break;
 
 	case 'en':
@@ -28,7 +28,7 @@ switch (ICL_LANGUAGE_CODE) {
 		$startDate = 'Check in';
 		$endDate = 'Check out';
 		$submitBTN = 'Search';
-		$url = 'https://m.danhostel.dk/en/hostel/'.$data[$danhostel_id].'/select-room';
+		$url = 'https://m.danhostel.dk/en/hostel/'.get_field('en:_hostel_id','option').'/select-room';
 		break;
 	
 	default:
@@ -37,7 +37,7 @@ switch (ICL_LANGUAGE_CODE) {
 		$startDate = 'Check ind';
 		$endDate = 'Check ud';
 		$submitBTN = 'Søg';
-		$url = 'https://m.danhostel.dk/en/hostel/'.$data[$danhostel_id].'/select-room';
+		$url = 'https://m.danhostel.dk/en/hostel/'.get_field('hostel_id','option').'/select-room';
 		break;
 	}
 ?>
