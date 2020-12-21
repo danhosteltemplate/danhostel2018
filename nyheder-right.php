@@ -1,9 +1,9 @@
-<?php if( $data['nyhedright']!="Nej" ) { ?>
+<?php if( get_field('skal_nyhedsboksen_vises_i_den_hojre_kolonne','option')!="Nej" ) { ?>
 
 <?php
 
-if( $data['items_per_page'] ) { 
-$event_perpage = $data['items_per_page'];
+if( get_field('hvor_mange_nyheder_skal_vi_vise_i_oversigtsiden','option') ) { 
+$event_perpage = get_field('hvor_mange_nyheder_skal_vi_vise_i_oversigtsiden','option');
 }
 else {
 $event_perpage = '1';
