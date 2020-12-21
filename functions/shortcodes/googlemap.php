@@ -44,8 +44,8 @@ function googlemap_shortcode( $atts, $content = null ) {
 	
 	// GOOGLE MAP API HERE
 	global $data;
-	if( isset($data['gmap-api']) ) {
-		$gapi = $data['gmap-api'];
+	if( get_field('google_map_api','option') ) {
+		$gapi = get_field('google_map_api','option');
 	} else {
 		$gapi = 'AIzaSyB2jhR794akD1be1uqgKoA5hq5mEf7b-zc';
 	}
