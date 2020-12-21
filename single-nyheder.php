@@ -47,7 +47,7 @@ wp_reset_query();
 
 <?php endwhile; endif; ?>
 <div class="one-third last-col">
-	<?php if( $data['bookingboksen']=="Ja" ){
+	<?php if( get_field('skal_booking_boksen_vaere_tilgaengelig','option')=="Ja" ){
 		echo '<div class="content-body leftfloater">';
 		echo '<div class="borderino">';
 		echo '<div class="booknow-left">';
@@ -57,7 +57,7 @@ wp_reset_query();
 		echo '</div>';
     }?>
     
-    <?php if( $data['quicklinksallesider']=="Ja" ) { load_template( get_template_directory() . '/includes/quicklinks.php' ); } ?>
+    <?php if( get_field('quicklinksallesider','option')=="Ja" ) { load_template( get_template_directory() . '/includes/quicklinks.php' ); } ?>
     
     <?php
 		echo '<div class="content-body leftfloater">';
