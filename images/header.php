@@ -40,9 +40,9 @@
 
 		// Dislay Google Analytics Code
 
-		if( $data['google-analytics'] ) { 
+		if( get_field('google-analytics','option') ) { 
 
-			echo $data['google-analytics'];
+			the_field('google-analytics','option');
 
 		}
 
