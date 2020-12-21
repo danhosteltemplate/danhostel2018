@@ -29,8 +29,8 @@ switch(ICL_LANGUAGE_CODE){
 
 $linksmiley = '';
 
-if ( $data['linksmiley'] ) {
-$linksmiley = $data['linksmiley'];
+if ( get_field('find_smiley_link','option') ) {
+$linksmiley = get_field('find_smiley_link','option');
 }
 ?>
 <div class="content-body leftfloater">                    
@@ -41,15 +41,15 @@ $linksmiley = $data['linksmiley'];
 <!-- BEGIN .event-prev -->	
 <div class="event-prev clearfix">
 <ul style="list-style:outside none; margin-bottom:14px;">
-<?php if( $data['nemadgang']!="Nej" ) { ?>
+<?php if( get_field('er_din_vandrerhjem_nem_adgang_certificeret','option')!="Nej" ) { ?>
 <li class="ikon" style="background:url(<?php echo get_bloginfo ( 'template_directory' );?>/images/SVG/godadgangLogo.svg) no-repeat; height:35px; padding-top:5px; padding-right:10px; margin-top:7px; background-size: 37px 37px"><a target="_blank" href="http://www.godadgang.dk/"><?php _e($godAdgang ,'qns');?></a></li>
 <?php }?>
-<?php if( $data['kursuscertificeret']!="Nej" ) { ?>
+<?php if( get_field('er_din_vandrerhjem_kursus_certificeret','option')!="Nej" ) { ?>
 <li class="ikon" style="background:url(<?php echo get_bloginfo ( 'template_directory' );?>/images/SVG/kursusLogo.svg) no-repeat; height:35px; padding-top:5px; padding-right:10px; margin-top:7px; background-size: 37px 37px"><a target="_blank" href="http://www.danhostel.dk/hvad-er-danhostels-konference-certificering"><?php _e($kursus,'qns');?></a></li>
 </ul>
 <?php } ?>
 <ul>
-<li style="height: 65px;"><a target="_blank" style="background:url(<?php echo get_bloginfo ( 'template_directory' );?>/images/SVG/smileyLop.svg) no-repeat; vertical-align: text-top; position: absolute; padding:52px 165px; margin: 0px auto; background-size: 165px 52px" href="<?php _e($data['linksmiley'],'qns'); ?>"></a></li>
+<li style="height: 65px;"><a target="_blank" style="background:url(<?php echo get_bloginfo ( 'template_directory' );?>/images/SVG/smileyLop.svg) no-repeat; vertical-align: text-top; position: absolute; padding:52px 165px; margin: 0px auto; background-size: 165px 52px" href="<?php the_field('find_smiley_link','option'); ?>"></a></li>
 </ul>
 <!-- END .event-prev -->
 </div>
