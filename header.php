@@ -16,8 +16,8 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
     <?php 
 		// Dislay Google Analytics Code
-		if( $data['google-analytics'] ) { 
-			echo $data['google-analytics'];
+		if( get_field('google-analytics','option')) { 
+			the_field('google-analytics','option');
 		}
 
 		// Dislay Facebook Pixel Code
