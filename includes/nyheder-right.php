@@ -17,7 +17,7 @@ switch (ICL_LANGUAGE_CODE) {
 		break;
 	}
 
-$event_perpage = $data['items_per_page'];
+$event_perpage = get_field('hvor_mange_nyheder_skal_vi_vise_i_oversigtsiden','option');
 
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;	
 query_posts( "post_type=event&showposts=$event_perpage" );
