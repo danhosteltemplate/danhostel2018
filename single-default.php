@@ -34,27 +34,27 @@ global $data;
 						$vaert = '';
 
 					
-						if ( $data['street_address'] ) {
-							$street_address = $data['street_address'];
+						if ( get_field('adresse','option') ) {
+							$street_address = get_field('adresse','option');
 						}
 						
-						if ( $data['cvr'] ) {
-							$cvr = $data['cvr'];
+						if ( get_field('cvr','option') ) {
+							$cvr = get_field('cvr','option');
 						}
 						
-						if ( $data['vaert'] ) {
-							$vaert = $data['vaert'];
+						if ( get_field('vaert','option') ) {
+							$vaert = get_field('vaert','option');
 						}
 					
-						if ( $data['phone_number'] ) {
-							$phone_number = $data['phone_number'];
+						if ( get_field('telefonnummer','option') ) {
+							$phone_number = get_field('telefonnummer','option');
 						}
 					
-						if ( $data['email_address'] ) {
-							$email_address = $data['email_address'];
+						if ( get_field('email','option') ) {
+							$email_address = get_field('email','option');
 						}	
-						if ( $data['sted_navn'] ) {
-							$sted_navn = $data['sted_navn'];
+						if ( get_field('sted_navn','option') ) {
+							$sted_navn = get_field('sted_navn','option');
 						}	
 					?>
                     <div class="one-third last-col">
@@ -66,12 +66,12 @@ global $data;
 							
 										<!--BEGIN .contact_list -->
 										<ul class="contact_list">
-                                        	<?php if ( $sted_navn ) { ?><li class="sted_navn"><span style="font-weight:bold"><?php _e($data['sted_navn'],'qns'); ?></span></li><?php } ?>
-											<?php if ( $street_address ) { ?><li class="street_address"><span><a href="http://maps.google.com/maps?q=<?php _e($data['sted_navn'],'qns'); ?> <?php _e($data['street_address'],'qns'); ?>"><?php _e($data['street_address'],'qns'); ?></a></span></li><?php } ?>
-											<?php if ( $email_address ) { ?><li class="email_address"><span><a href="mailto:<?php _e($data['email_address'],'qns'); ?>"><?php _e($data['email_address'],'qns'); ?></a></span></li><?php } ?>
-											<?php if ( $phone_number ) { ?><li class="phone_number"><span><a href="tel://<?php _e($data['phone_number'],'qns'); ?>"><?php _e($data['phone_number'],'qns'); ?></a></span></li><?php } ?>
-                                            <?php if ( $vaert ) { ?><li class="vaert"><span><?php _e($data['vaert'],'qns'); ?></span></li><?php } ?>
-                                            <?php if ( $cvr ) { ?><li class="cvr"><span><?php _e($data['cvr'],'qns'); ?></span></li><?php } ?> 
+                                        	<?php if ( $sted_navn ) { ?><li class="sted_navn"><span style="font-weight:bold"><?php the_field('sted_navn','option'); ?></span></li><?php } ?>
+											<?php if ( $street_address ) { ?><li class="street_address"><span><a href="http://maps.google.com/maps?q=<?php the_field('sted_navn','option'); ?> <?php the_field('adresse','option'); ?>"><?php the_field('adresse','option'); ?></a></span></li><?php } ?>
+											<?php if ( $email_address ) { ?><li class="email_address"><span><a href="mailto:<?php the_field('email','option'); ?>"><?php the_field('email','option'); ?></a></span></li><?php } ?>
+											<?php if ( $phone_number ) { ?><li class="phone_number"><span><a href="tel://<?php the_field('telefonnummer','option'); ?>"><?php the_field('telefonnummer','option'); ?></a></span></li><?php } ?>
+                                            <?php if ( $vaert ) { ?><li class="vaert"><span><?php the_field('vaert','option'); ?></span></li><?php } ?>
+                                            <?php if ( $cvr ) { ?><li class="cvr"><span><?php the_field('cvr','option'); ?></span></li><?php } ?> 
 
 										<!--END .contact_list -->
 										</ul>
@@ -82,11 +82,11 @@ global $data;
                                         <?php 
 							// If the Google Maps option is selected display the map
 								
-								$map_lat = $data['gmap-top-lat'];
-								$map_lng = $data['gmap-top-lng'];
+								$map_lat = get_field('google_map_latitude','option');
+								$map_lng = get_field('google_map_longitude','option');
 								
-								if ( $data['gmap-top-content'] ) {
-									$map_content = 'marker_html="' . $data['gmap-top-content'] . '"';
+								if ( get_field('google_map_marker','option') ) {
+									$map_content = 'marker_html="' . get_field('google_map_marker','option') . '"';
 								}
 								
 								echo do_shortcode('[googlemap height="300px" width="100%" latitude="' . $map_lat . '" longitude="' . $map_lng . '" marker_latitude="' . $map_lat . '" marker_longitude="' . $map_lng . '" ' . $map_content . ' marker_popup=false ]');
