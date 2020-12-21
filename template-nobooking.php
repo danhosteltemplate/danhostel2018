@@ -36,7 +36,7 @@ Template Name: Uden Booking
 
                     <div class="one-third last-col">
                          
-                                <?php if( $data['quicklinksallesider']!="Nej" ) { load_template( get_template_directory() . '/includes/quicklinks.php' ); } ?>
+                                <?php if( get_field('quicklinksallesider','option')!="Nej" ) { load_template( get_template_directory() . '/includes/quicklinks.php' ); } ?>
                 				<?php load_template( get_template_directory() . '/includes/kontaktos.php' ); ?>
                  				<?php load_template( get_template_directory() . '/includes/nyheder-right.php' ); ?>
                                     
