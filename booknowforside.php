@@ -46,7 +46,7 @@ switch (ICL_LANGUAGE_CODE) {
 <form class="booking-form booking-validation" name="bookroom" method="get" action="<?php echo $url; ?>">
     <h2><strong><?php _e($title, $DOMAIN);?></strong></h2>
     <div class="clearfix">
-        <input name="hostel_id" value="<?php echo $data[$danhostel_id];?>" type="hidden">
+        <input name="hostel_id" value="<?php the_field('hostel_id','option');?>" type="hidden">
         <input type="date" id="fromdate" name="fromdate" value="<?php _e($startDate, $DOMAIN); ?>" class="input-half datepicker">
         <input type="date" id="todate" name="todate" value="<?php _e($endDate, $DOMAIN); ?>" class="input-half input-half-last datepicker">
         <input name="persons" value="1" type="hidden">
