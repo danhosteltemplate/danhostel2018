@@ -12,7 +12,7 @@
 			<div class="two-thirds">
             <div class="content-body leftfloater">               
 			<div class="page-content blog-list-wrapper">
-            <h2 class="page-title"><strong><?php the_title(); ?></strong></h2>
+            <h1 class="page-title"><strong><?php the_title(); ?></strong></h1>
 			<div class="undertitle bordertop2px" style="width:100%; height:13px;"></div>
 			<?php load_template( get_template_directory() . '/includes/loop.php' ); ?>
             </div>   
