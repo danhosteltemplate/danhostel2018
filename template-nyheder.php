@@ -40,7 +40,7 @@ switch (ICL_LANGUAGE_CODE) {
 				<!-- BEGIN .page-content -->
 				<div class="page-content event-list-wrapper">
 
-			<h2 class="page-title"><strong class="borderbottom4px" style="padding-bottom:12px;"><?php the_title(); ?></strong></h2>
+			<h1 class="page-title"><strong class="borderbottom4px" style="padding-bottom:12px;"><?php the_title(); ?></strong></h1>
 			<div class="undertitle bordertop2px" style="width:100%; height:13px;"></div>
 					<?php the_content(); ?>
 					<?php
