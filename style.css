@@ -8,7 +8,7 @@ Theme URI: http://danhostel.dk
 
 Description: Danhostel Responsive
 
-Version: 5.2.1
+Version: 5.2.2
 
 Author: Danhostel - Webmaster
 
@@ -110,6 +110,11 @@ video {
 html .slider .slides>li {
   min-height: 520px;
   background-size: cover;
+}
+.page-content h1.page-title {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
 }
 
 @font-face {
