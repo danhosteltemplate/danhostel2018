@@ -9,27 +9,7 @@ Template Name: Forside
 	<?php global $data; 
 	$hostel_id = get_field('hostel_id','option');
 ?>
-<?php if ($hostel_id!=null){ ?>
 
-
-	<?php wp_footer(); ?>
-
- <?php if(ICL_LANGUAGE_CODE=='da') {?>
- <iframe src="http://m.danhostel.dk/hostel/hostel-show-rooms?hostel_id=<?php  the_field('hostel_id','option');?>&fromdate=<?php _e($_GET['fromdate']);?>&todate=<?php _e($_GET['todate']);?>&persons=1" width="100%" frameborder="0" style="min-height:7500px; width:100%">
-<?php } ?>                    
-                  
-<?php if(ICL_LANGUAGE_CODE=='en') {?>
- <iframe src="http://m.danhostel.dk/en/hostel/hostel-show-rooms?hostel_id=<?php  the_field('en:_hostel_id','option');?>&fromdate=<?php _e($_GET['fromdate']);?>&todate=<?php _e($_GET['todate']);?>&persons=1" width="100%" frameborder="0" style="min-height:7500px; width:100%">
-<?php } ?>                    
-
-<?php if(ICL_LANGUAGE_CODE=='de') {?>
- <iframe src="http://m.danhostel.dk/de/hostel/hostel-show-rooms?hostel_id=<?php  the_field('de:_hostel_id','option');?>&fromdate=<?php _e($_GET['fromdate']);?>&todate=<?php _e($_GET['todate']);?>&persons=1" width="100%" frameborder="0" style="min-height:7500px; width:100%">
- <?php } ?>       
-		</div>
-
-
-    
-<?php } else {?> 
 
 
 	<!-- BEGIN .section -->
@@ -182,4 +162,3 @@ load_template( get_template_directory() . '/includes/nyheder-right.php' );
 	<!-- END .section -->
 	</div>
 <?php get_footer(); ?>
-<?php } ?>
