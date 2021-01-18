@@ -37,7 +37,7 @@ switch (ICL_LANGUAGE_CODE) {
 		$startDate = 'Check ind';
 		$endDate = 'Check ud';
 		$submitBTN = 'Søg';
-		$url = 'https://m.danhostel.dk/en/hostel/'.get_field('hostel_id','option').'/select-room';
+		$url = 'https://m.danhostel.dk/hostel/'.get_field('hostel_id','option').'/select-room';
 		break;
 	}
 ?>
