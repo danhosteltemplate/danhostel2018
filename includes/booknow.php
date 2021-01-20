@@ -48,8 +48,8 @@ switch (ICL_LANGUAGE_CODE) {
     <div class="undertitle bordertop2px" style="width:100%;     margin-bottom: 10px;height:20px;"></div>
     <div class="clearfix">
         <!--<input name="hostel_id" value="<?php echo $data[$danhostel_id];?>" type="hidden">-->
-        <input type="text" id="fromdate" name="from" value="<?php //_e($startDate, $DOMAIN); ?>"class="input-half datepicker" placeholder="<?php echo __('Fra dato','danhostel');?>" />
-        <input type="text" id="todate" name="to" value="<?php //_e($endDate, $DOMAIN); ?>" class="input-half input-half-last datepicker" placeholder="<?php echo __('Til dato','danhostel');?>" />
+        <input type="text" id="fromdate" name="from" value="<?php //_e($startDate, $DOMAIN); ?>"class="input-half datepicker" placeholder="<?php echo __('Fra dato','danhostel');?>" required />
+        <input type="text" id="todate" name="to" value="<?php //_e($endDate, $DOMAIN); ?>" class="input-half input-half-last datepicker" placeholder="<?php echo __('Til dato','danhostel');?>" required />
         <input name="persons" value="1" type="hidden">
         <input class="bookbutton" type="submit" value="<?php _e($submitBTN, $DOMAIN); ?>" />
     </div>
