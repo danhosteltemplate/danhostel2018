@@ -7,7 +7,7 @@
 				
 
 				
-				<form class="booking-form booking-validation" name="bookroom" method="get" action="http://m.danhostel.dk/hostel/hostel-show-rooms"> 
+				<form class="booking-form booking-validation" name="bookroom" method="get" action="https://m.danhostel.dk/hostel/hostel-show-rooms"> 
 <?php if(ICL_LANGUAGE_CODE=='da') {?>
 					<h2><?php _e('Book din overnatning','qns'); ?></h2></br>
 <?php } ?>                    
