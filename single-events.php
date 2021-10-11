@@ -150,7 +150,7 @@
 										<!--BEGIN .contact_list -->
 										<ul class="contact_list">
                                         	<?php if ( $sted_navn ) { ?><li class="sted_navn"><span style="font-weight:bold"><?php the_field('sted_navn','option'); ?></span></li><?php } ?>
-											<?php if ( $street_address ) { ?><li class="street_address"><span><a href="http://maps.google.com/maps?q=<?php the_field('sted_navn','option'); ?> <?php the_field('adresse','option'); ?>"><?php the_field('adresse','option'); ?></a></span></li><?php } ?>
+											<?php if ( $street_address ) { ?><li class="street_address"><span><a href="https://maps.google.com/maps?q=<?php the_field('sted_navn','option'); ?> <?php the_field('adresse','option'); ?>"><?php the_field('adresse','option'); ?></a></span></li><?php } ?>
 											<?php if ( $email_address ) { ?><li class="email_address"><span><a href="mailto:<?php the_field('email','option'); ?>"><?php the_field('email','option'); ?></a></span></li><?php } ?>
 											<?php if ( $phone_number ) { ?><li class="phone_number"><span><a href="tel://<?php the_field('telefonnummer','option'); ?>"><?php the_field('telefonnummer','option'); ?></a></span></li><?php } ?>
                                             <?php if ( $vaert ) { ?><li class="vaert"><span><?php the_field('vaert','option'); ?></span></li><?php } ?>
