@@ -16,7 +16,7 @@ function video_shortcode( $atts, $content = null ) {
 	if ( $type == 'youtube' ) {
 		$output .= '<div class="video-wrapper clearfix"><iframe ';
 		$output .= 'style="width: ' . $width . ';" ';
-		$output .= 'height="' . $height . '" src="http://www.youtube.com/embed/';
+		$output .= 'height="' . $height . '" src="https://www.youtube.com/embed/';
 		$output .= $id . '?';
 		$output .= 'HD=' . $hd . ';';
 		$output .= 'rel=0;';
@@ -28,7 +28,7 @@ function video_shortcode( $atts, $content = null ) {
 	if ( $type == 'vimeo' ) {
 		$output .= '<div class="video-wrapper clearfix"><iframe ';
 		$output .= 'style="width: ' . $width . ';" ';
-		$output .= 'height="' . $height . '" src="http://player.vimeo.com/video/';
+		$output .= 'height="' . $height . '" src="https://player.vimeo.com/video/';
 		$output .= $id . '?';
 		$output .= 'autoplay=0&amp;';
 		$output .= 'title=0&amp;';
