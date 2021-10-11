@@ -2343,7 +2343,7 @@ function rsssl_exclude_http_url($html) {
   $html = str_replace("https://www.danhostel.dk", "http://www.danhostel.dk", $html);
   return $html;
 }
-add_filter("rsssl_fixer_output","rsssl_exclude_http_url");
+//add_filter("rsssl_fixer_output","rsssl_exclude_http_url");
 
 
 add_filter( 'acf/settings/current_language',  '__return_false' );
