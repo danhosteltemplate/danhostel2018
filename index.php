@@ -7,7 +7,7 @@
 		wp_reset_query();
 	?>
 	
-	<!-- BEGIN .section -->
+	<!-- BEGIN .section test update-->
 	<div class="section clearfix">
 		
 		<!-- BEGIN .main-content -->
