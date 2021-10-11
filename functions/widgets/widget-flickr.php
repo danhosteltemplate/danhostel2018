@@ -34,9 +34,9 @@ class qns_flickr_widget extends WP_Widget {
 		 } ?>
 			
 			<div class="flickr_badge_wrapper clearfix">
-				<script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=<?php echo $flickr_count ?>&amp;flickr_display=latest&amp;size=s&amp;layout=x&amp;source=<?php echo $flickr_type ?>&amp;<?php echo $flickr_type ?>=<?php echo $flickr_id ?>"></script>
+				<script type="text/javascript" src="https://www.flickr.com/badge_code_v2.gne?count=<?php echo $flickr_count ?>&amp;flickr_display=latest&amp;size=s&amp;layout=x&amp;source=<?php echo $flickr_type ?>&amp;<?php echo $flickr_type ?>=<?php echo $flickr_id ?>"></script>
 				<div style="clear:both;"></div>
-				<p class="flickr-more-photos"><a href="http://www.flickr.com/<?php echo ($flickr_type == 'user' ? 'photos' : 'groups') ?>/<?php echo $flickr_id ?>"><?php _e( 'View All', 'qns' ) ?> &rarr;</a></p>
+				<p class="flickr-more-photos"><a href="https://www.flickr.com/<?php echo ($flickr_type == 'user' ? 'photos' : 'groups') ?>/<?php echo $flickr_id ?>"><?php _e( 'View All', 'qns' ) ?> &rarr;</a></p>
 			</div>
 		<?php
 		
