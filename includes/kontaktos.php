@@ -40,7 +40,7 @@ switch(ICL_LANGUAGE_CODE){
 				  <?php } ?>
 
 				  <?php if ( get_field('adresse','option') ) { ?>
-                  <li class="street_address" title="Adresse"><span><a href="http://maps.google.com/maps?q=<?php the_field('sted_navn','option'); ?> 
+                  <li class="street_address" title="Adresse"><span><a href="https://maps.google.com/maps?q=<?php the_field('sted_navn','option'); ?> 
 				  <?php the_field('adresse','option'); ?>"><?php the_field('adresse','option'); ?></a></span></li>
 				  <?php } ?>
 
