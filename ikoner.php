@@ -44,7 +44,7 @@ if(ICL_LANGUAGE_CODE=='de') {_e('Certificeringer','qns'); } ?></strong></h2>
 <div class="event-prev clearfix">
 <ul style="list-style:outside none; margin-bottom:14px;">
 <?php if( get_field('er_din_vandrerhjem_nem_adgang_certificeret','option')!="Nej" ) { ?>
-<li style=" background:url(<?php echo get_bloginfo ( 'template_directory' );?>/images/SVG/godadgangLogo.svg) no-repeat; height:35px; padding-top:5px; background-size: 35px 35px"><a targer="_blank" href="http://www.godadgang.dk/"><?php _e($godAdgang ,'qns');?></a></li>
+<li style=" background:url(<?php echo get_bloginfo ( 'template_directory' );?>/images/SVG/godadgangLogo.svg) no-repeat; height:35px; padding-top:5px; background-size: 35px 35px"><a targer="_blank" href="https://www.godadgang.dk/"><?php _e($godAdgang ,'qns');?></a></li>
 <?php }?>
 
 <?php if( get_field('er_din_vandrerhjem_kursus_certificeret','option')!="Nej" ) { ?>
