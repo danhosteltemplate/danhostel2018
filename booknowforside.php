@@ -10,7 +10,7 @@ switch (ICL_LANGUAGE_CODE) {
 		$startDate = 'Check ind';
 		$endDate = 'Check ud';
 		$submitBTN = 'Søg';
-		$url = 'http://m.danhostel.dk/hostel/hostel-show-rooms';
+		$url = 'https://m.danhostel.dk/hostel/hostel-show-rooms';
 		break;
 
 	case 'de':
@@ -19,7 +19,7 @@ switch (ICL_LANGUAGE_CODE) {
 		$startDate = 'Einchecken';
 		$endDate = 'Auschecken';
 		$submitBTN = 'Suchen';
-		$url = 'http://m.danhostel.dk/de/hostel/hostel-show-rooms';
+		$url = 'https://m.danhostel.dk/de/hostel/hostel-show-rooms';
 		break;
 
 	case 'en':
@@ -28,7 +28,7 @@ switch (ICL_LANGUAGE_CODE) {
 		$startDate = 'Check in';
 		$endDate = 'Check out';
 		$submitBTN = 'Search';
-		$url = 'http://m.danhostel.dk/en/hostel/hostel-show-rooms';
+		$url = 'https://m.danhostel.dk/en/hostel/hostel-show-rooms';
 		break;
 	
 	default:
@@ -37,7 +37,7 @@ switch (ICL_LANGUAGE_CODE) {
 		$startDate = 'Check ind';
 		$endDate = 'Check ud';
 		$submitBTN = 'Søg';
-		$url = 'http://m.danhostel.dk/hostel/hostel-show-rooms';
+		$url = 'https://m.danhostel.dk/hostel/hostel-show-rooms';
 		break;
 	}
 ?>
