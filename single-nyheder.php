@@ -26,7 +26,7 @@ wp_reset_query();
     <!-- BEGIN .event-prev -->	
         <div class="event-prev event-single clearfix" style="margin-bottom: 20px;">
          <ul class="share-buttons">
-      <li><a href="http://www.facebook.com/share.php?u=<full page url to share" onClick="return fbs_click(400, 300)" target="_blank" title="Share This on Facebook">Del på Facebook</a></li>
+      <li><a href="https://www.facebook.com/share.php?u=<full page url to share" onClick="return fbs_click(400, 300)" target="_blank" title="Share This on Facebook">Del på Facebook</a></li>
       </ul>
         <?php // Get the Thumbnail URL
         if (wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'full-size')) {
