@@ -5,6 +5,7 @@ Template Name: Forside
 */ 
 
 ?>
+<!-- home page -->
 <?php get_header(); ?>
 	<?php global $data; 
 	$hostel_id = get_field('hostel_id','option');
