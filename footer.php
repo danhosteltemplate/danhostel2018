@@ -6,7 +6,7 @@
 
 			<p style="text-align:center">
 				<?php // Display footer message
-echo '<a href="http://www.danhostel.dk" style="text-align:center">';
+echo '<a href="https://www.danhostel.dk" style="text-align:center">';
                                     echo __('&copy; Copyright www.danhostel.dk','danhostel');
                                    echo '</a>';
 							echo ' - <a href="https://www.danhostel.dk/persondatapolitik" class="footer-terms">';
