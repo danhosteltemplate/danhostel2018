@@ -10,7 +10,7 @@ Template Name: Newtemplate
 ?>
 
 
- <iframe src="http://google.com" width="100%" frameborder="0" style="min-height:88vh; width:100%"></iframe>
+ <iframe src="https://google.com" width="100%" frameborder="0" style="min-height:88vh; width:100%"></iframe>
 
 
 
