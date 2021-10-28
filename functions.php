@@ -331,6 +331,29 @@ if( function_exists('acf_add_local_field_group') ):
 				'choices' => array(
 					'Nej' => 'Nej',
 					'Ja' => 'Ja',
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'choices' => array(
+					'Nej' => 'Nej',
+					'Ja' => 'Ja',
+				),
+				'default_value' => false,
+				'allow_null' => 0,
+				'multiple' => 0,
+				'ui' => 0,
+				'return_format' => 'value',
+				'ajax' => 0,
+				'placeholder' => '',
+			),
+			array(
+				'key' => 'field_5fdf1435fc4ff',
+				'label' => 'Bookingbox Indstillinger',
+				'name' => '',
+				'type' => 'tab',
+				'instructions' => '',
+				'required' => 0,
 				),
 				'default_value' => false,
 				'allow_null' => 0,
@@ -2347,3 +2370,17 @@ function rsssl_exclude_http_url($html) {
 
 
 add_filter( 'acf/settings/current_language',  '__return_false' );
+
+add_filter( 'gform_date_max_year', 'set_max_year' );
+
+function set_max_year( $max_year ) {
+
+    return 2025;
+
+}
+
+
+
+
+
+
