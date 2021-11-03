@@ -354,7 +354,6 @@ if( function_exists('acf_add_local_field_group') ):
 				'type' => 'tab',
 				'instructions' => '',
 				'required' => 0,
-				),
 				'default_value' => false,
 				'allow_null' => 0,
 				'multiple' => 0,
