@@ -2371,6 +2371,11 @@ function rsssl_exclude_http_url($html) {
 add_filter( 'acf/settings/current_language',  '__return_false' );
 
 
+add_filter( 'gform_date_max_year', 'set_max_year' );
+function set_max_year( $max_year ) {
+return 2025;
+}
+
 
 
 
